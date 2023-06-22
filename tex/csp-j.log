@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.6.22)  22 JUN 2023 18:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.6.22)  23 JUN 2023 00:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,9 +914,7 @@ File: csp-j.png Graphic file (type bmp)
 
 ]
 第二章
-[6
-
-] (C:\CTEX\MiKTeX\tex/latex/listings\lstlang1.sty
+(C:\CTEX\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 (C:\CTEX\MiKTeX\tex/latex/listings\lstlang1.sty
@@ -924,7 +922,15 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 (C:\CTEX\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-)
+) [6
+
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 2799) has occurred while \output is active []
+
 File: shuwenedu.png Graphic file (type bmp)
 <shuwenedu.png>
 
@@ -939,8 +945,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: pku.png Graphic file (type bmp)
 <pku.png>
 [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: shuwenedu.png Graphic file (type bmp)
 <shuwenedu.png>
 
@@ -1013,7 +1017,7 @@ File: pku.png Graphic file (type bmp)
 [15
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 333--340
+Underfull \hbox (badness 10000) in paragraph at lines 358--365
 
  []
 
@@ -1072,7 +1076,7 @@ File: pku.png Graphic file (type bmp)
 ]
 第十章
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
@@ -1109,7 +1113,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: pku.png Graphic file (type bmp)
 <pku.png>
 [27]
-Overfull \hbox (13.10818pt too wide) in paragraph at lines 546--547
+Overfull \hbox (13.10818pt too wide) in paragraph at lines 571--572
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1130,7 +1134,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: pku.png Graphic file (type bmp)
 <pku.png>
 [28]
-Overfull \hbox (13.10818pt too wide) in paragraph at lines 597--598
+Overfull \hbox (13.10818pt too wide) in paragraph at lines 622--623
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1185,14 +1189,17 @@ L3 programming layer <2022/08/05>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `csp-j.out' has not changed.
 (rerunfilecheck)             Checksum: B58F47C5FDA1400C8373B047AF92E044;4707.
  ) 
 Here is how much of TeX's memory you used:
- 20672 strings out of 411165
- 417368 string characters out of 5816116
+ 20685 strings out of 411165
+ 417499 string characters out of 5816116
  1891380 words of memory out of 5000000
- 40894 multiletter control sequences out of 15000+600000
+ 40907 multiletter control sequences out of 15000+600000
  525509 words of font info for 118 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,13n,108p,1205b,1728s stack positions out of 10000i,1000n,20000p,200000b,200000s

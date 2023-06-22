@@ -128,7 +128,29 @@ $a^b$即b个a相乘的值，例如$2^3$即为3个2相乘，结果为$2\times2\ti
 对于 $60\%$ 的数据，保证 $b \leq 30, a^b \leq 10^{18}$\\
 对于 $100\%$ 的数据，保证 $1 \leq a, b \leq 10^9$
 \begin{lstlisting}[language=C++]
+int pow() {
+    ifstream fin("pow.in");
+    ofstream fout("pow.out");
 
+    int a, b;
+    fin >> a >> b;
+
+    long long result = 1;
+    for (int i = 0; i < b; i++) {
+        result *= a;
+        if (result > 1000000000) {
+            fout << -1 << endl;
+            return 0;
+        }
+    }
+
+    fout << result << endl;
+
+    fin.close();
+    fout.close();
+
+    return 0;
+}
 \end{lstlisting}
 
 \subsection{基本的内置类型}
