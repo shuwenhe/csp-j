@@ -235,8 +235,7 @@ int logicalOperator(){
 	return 0;
 }
 
-
-int main() {
+int pow() {
     ifstream fin("pow.in");
     ofstream fout("pow.out");
 
@@ -258,4 +257,8 @@ int main() {
     fout.close();
 
     return 0;
+}
+
+int main(){
+	pow();
 }
