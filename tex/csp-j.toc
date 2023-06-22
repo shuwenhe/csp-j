@@ -1,7 +1,7 @@
 \contentsline {chapter}{目录}{2}{chapter*.1}%
 \contentsline {chapter}{\numberline {第一章\hspace {.3em}}C++基础思维导图}{5}{chapter.0.1}%
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}程序基本概念}{6}{chapter.0.2}%
-\contentsline {section}{\numberline {1}数据类型}{6}{section.0.2.1}%
+\contentsline {section}{\numberline {1}2022CSP-J2}{6}{section.0.2.1}%
 \contentsline {subsection}{\numberline {1.1}基本的内置类型}{6}{subsection.0.2.1.1}%
 \contentsline {subsection}{\numberline {1.2}自定义数据类型}{7}{subsection.0.2.1.2}%
 \contentsline {subsubsection}{\numberline {1.2.1}struct结构体}{7}{subsubsection.0.2.1.2.1}%
