@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.6.22)  23 JUN 2023 13:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.6.22)  23 JUN 2023 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -918,9 +918,12 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) [4
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 157--248
+
+ []
+
 File: shuwenedu.png Graphic file (type bmp)
 <shuwenedu.png>
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 30.6951pt, for example:
@@ -961,7 +964,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: pku.png Graphic file (type bmp)
 <pku.png>
-[7] (csp-j.aux)
+[7]
+File: shuwenedu.png Graphic file (type bmp)
+<shuwenedu.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 30.6951pt, for example:
+(fancyhdr)                \setlength{\headheight}{30.6951pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-18.6951pt}.
+
+File: pku.png Graphic file (type bmp)
+<pku.png>
+[8] (csp-j.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2022/08/05>
@@ -974,12 +991,12 @@ Package rerunfilecheck Info: File `csp-j.out' has not changed.
 (rerunfilecheck)             Checksum: 091394D72B7BB91E5F78A6285D7E1B22;666.
  ) 
 Here is how much of TeX's memory you used:
- 20429 strings out of 411165
- 408567 string characters out of 5816116
- 1886380 words of memory out of 5000000
- 40655 multiletter control sequences out of 15000+600000
- 525316 words of font info for 114 fonts, out of 8000000 for 9000
+ 20457 strings out of 411165
+ 408765 string characters out of 5816116
+ 1888380 words of memory out of 5000000
+ 40683 multiletter control sequences out of 15000+600000
+ 525477 words of font info for 114 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,12n,108p,1205b,1097s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,13n,108p,1205b,1726s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on csp-j.pdf (8 pages).
+Output written on csp-j.pdf (9 pages).
