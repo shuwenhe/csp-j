@@ -97,6 +97,7 @@ ShuwenHe\\
 \chapter{CSP-J思维导图}
 \includegraphics[scale=0.15]{csp-j.png}
 
+\chapter{2022CSP-J2}
 \section{2022CSP-J2-pow乘方}
 【题目描述】\\
 小文同学刚刚接触了信息学竞赛，有一天她遇到了这样一个题：给定正整数a和b，求$a^b$的值是多少。\\
@@ -152,7 +153,8 @@ int pow() {
 }
 
 \end{lstlisting}
-\section{2022CSP-J2-pow乘方}
+
+\section{2022CSP-J2-decode解密}
 【题目描述】\\
 给定一个正整数$k$，有$k$次询问，每次给定三个正整数$n_i, e_i, d_i$求两个正整数$p_i
 , q_i$，使$n_i = p_i \times q_i, e_i \times d_i = (p_i − 1)(q_i − 1) + 1$。\\
@@ -179,6 +181,69 @@ int pow() {
   9 & 867 17 17\\
   10 & 829 3 263\\
   11 & 528 4 109\\
+  \hline
+\end{tabular}\\
+【样例 1 输出】\\
+\begin{tabular}{|c|c|c|}
+  \hline
+  1 & 385 \\
+  2 & NO \\
+  3 & NO \\
+  4 & NO \\
+  5 & 11 78\\
+  6 & 3 241\\
+  7 & 2 286\\
+  8 & NO\\
+  9 & NO\\
+  10 & 6 88\\
+  \hline
+\end{tabular}\\
+【样例 2】\\
+见选手目录下的 decode/decode2.in 与 decode/decode2.ans。\\
+【样例 3】\\
+见选手目录下的 decode/decode3.in 与 decode/decode3.ans。\\
+【样例 4】\\
+见选手目录下的 decode/decode4.in 与 decode/decode4.ans。\\
+【数据范围】\\
+以下记 $m = n − e \times d + 2$。\\
+保证对于 $100\%$ 的数据，$1 \leq k \leq 10^5$，对于任意的 $1 \leq i \leq k,1 \leq n_i \leq 10^{18}
+, 1 \leq ei \times di \leq 10^{18}, 1 \leq m \leq 10^9$。\\
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  测试点编号 & k $\leq$ & n $\leq$ & m $\leq$ & 特殊性质 \\
+  \hline
+  1 & & & & 保证有解\\
+  \cline{1-1}
+  \cline{5-1}
+  2 & & $10^3$ & $10^3$ & 无\\
+  \cline{1-1}
+  \cline{3-1}
+  \cline{4-1}
+  \cline{5-1}
+  3 & & & & 保证有解\\
+  \cline{1-1}
+  \cline{5-1}
+  4 &  $10^3$ & $10^9$ & $6\times 10^4$ & 无\\
+  \cline{1-1}
+  \cline{4-1}
+  \cline{5-1}
+  5 & & & & 保证有解\\
+  \cline{1-1}
+  \cline{5-1}
+  6 & & & & 无\\
+  \cline{1-1}
+  \cline{2-1}
+  \cline{3-1}
+  \cline{5-1}
+  7 & & & & 保证若有解则 p = q\\
+  \cline{1-1}
+  \cline{5-1}
+  8 & & & $10^{9}$ & 保证有解\\
+  \cline{1-1}
+   \cline{5-1}
+  9 & $10^5$ & $10^{18}$ &  & \\
+  \cline{1-1}
+  10 & & & & 无\\
   \hline
 \end{tabular}
 
