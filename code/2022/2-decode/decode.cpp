@@ -3,7 +3,6 @@
 
 using namespace std;
 
-// 2022CSP-J2-decode解密
 bool isPrime(int num) {
     if (num < 2)
         return false;

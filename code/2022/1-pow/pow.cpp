@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main(){
+int pow(){
 	ifstream fin("pow.in");
 	ofstream fout("pow.out");
 
@@ -21,6 +21,10 @@ int main(){
 
 	fin.close();
 	fout.close();
+	return 0;
+}
 
+int main(){
+	pow();
 	return 0;
 }
