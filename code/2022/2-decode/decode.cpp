@@ -42,7 +42,7 @@ int decode() {
             continue;
         }
 
-        outputFile << p << " " << q << "\n";
+        outputFile<<i + 1 << p << " " << q << "\n";
     }
 
     inputFile.close();
@@ -53,4 +53,5 @@ int decode() {
 
 int main(){
 	decode();
+	return 0;
 }
