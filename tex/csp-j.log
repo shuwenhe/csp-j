@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.1 (MiKTeX 23.4) (format=lualatex 2023.6.13)  29 JUN 2023 15:02
+This is LuaHBTeX, Version 1.16.1 (MiKTeX 23.4) (format=lualatex 2023.6.13)  30 JUN 2023 08:50
  restricted system commands enabled.
 **csp-j.tex
 (./csp-j.tex
@@ -1178,108 +1178,29 @@ e 86.
 
 ]
 第一章
-<csp-j.png, id=48, 1009.7725pt x 3287.28125pt>
-File: csp-j.png Graphic file (type png)
-<use csp-j.png>
-Package luatex.def Info: csp-j.png  used on input line 99.
-(luatex.def)             Requested size: 151.45934pt x 493.07092pt.
-[3
-
-<./csp-j.png>]
-第二章
 LaTeX Font Info:    Font shape `LTJY3/SimSun(0)/bx/n' in size <17.28> not avail
 able
 (Font)              Font shape `LTJY3/SimSun(0)/b/n' tried instead on input lin
-e 102.
-(C:/CTEX/MiKTeX/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-(C:/CTEX/MiKTeX/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-(C:/CTEX/MiKTeX/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-) [4
+e 99.
+! Misplaced alignment tab character &.
+l.105 ...dcb4684b4-4njx9 -n sidsa > variable.log 2>&
+                                                  1
+? 
+! Emergency stop.
+l.105 
+    
+End of file on the terminal!
 
-]
-Removing  `ltj.process_input_buffer' from `process_input_buffer'.
-Inserting `ltj.listings_unicode' in `process_input_buffer'.
-Inserting `ltj.process_input_buffer' in `process_input_buffer'.
-Removing  `ltj.listings_unicode' from `process_input_buffer'.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.91003pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.91003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.91003pt}.
-
-[5]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.91003pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.91003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.91003pt}.
-
-[6]
-Removing  `ltj.process_input_buffer' from `process_input_buffer'.
-Inserting `ltj.listings_unicode' in `process_input_buffer'.
-Inserting `ltj.process_input_buffer' in `process_input_buffer'.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.91003pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.91003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.91003pt}.
-
-[7]
-Removing  `ltj.listings_unicode' from `process_input_buffer'.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.91003pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.91003pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.91003pt}.
-
-[8]
-第三章
-[9
-
-] (./csp-j.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package rerunfilecheck Info: File `csp-j.out' has not changed.
-(rerunfilecheck)             Checksum: 134787122E298DDB85A2CE96B8DDA7C9;741.
-)
 
 Here is how much of LuaTeX's memory you used:
- 21527 strings out of 478278
- 244345,1977958 words of node,token memory allocated
- 856 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 118 attribute, 66 glue_spe
-c, 19 attribute_list, 2 write, 10 user_defined nodes
-   avail lists: 1:6,2:60823,3:374,4:2890,5:548,6:68,7:4547,8:35,9:3807,10:6,11:2
-8,12:1
- 40699 multiletter control sequences out of 65536+600000
- 108 fonts using 140651239 bytes
- 88i,12n,111p,2103b,881s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<//?/c:/ctex/miktex/fonts/opentype/public/lm/lmromanslant12-regular.otf><C:/Wind
-ows/Fonts/simkai.ttf><//?/c:/ctex/miktex/fonts/opentype/public/lm/lmroman12-bold
-.otf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simsun.ttc><//?/c:/ctex/mikt
-ex/fonts/opentype/public/lm/lmroman12-regular.otf><//?/c:/ctex/miktex/fonts/open
-type/public/lm/lmroman17-regular.otf><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/CTEX
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on csp-j.pdf (9 pages, 266295 bytes).
-
-PDF statistics: 227 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 131072)
- 49 words of extra memory for PDF output out of 10000 (max. 100000000)
-
+ 21185 strings out of 478278
+ 125096,1977958 words of node,token memory allocated 5912 words of node memory still in use:
+   13 hlist, 1 vlist, 8 rule, 6 mark, 1 disc, 4 local_par, 1 dir, 73 glue, 6 ker
+n, 15 penalty, 323 glyph, 1041 attribute, 66 glue_spec, 107 attribute_list, 1 te
+mp, 7 write, 15 user_defined, 2 pdf_dest, 4 pdf_colorstack nodes
+   avail lists: 1:3,2:3180,3:86,4:122,5:68,6:16,7:42,8:2,9:147,10:6,11:11,12:1
+ 40475 multiletter control sequences out of 65536+600000
+ 107 fonts using 140589159 bytes
+ 88i,6n,111p,2103b,375s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
