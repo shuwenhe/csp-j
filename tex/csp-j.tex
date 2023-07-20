@@ -636,6 +636,51 @@ int main(){
 }
 \end{lstlisting}
 
+\section{bubble-sort}
+冒泡排序64,34,25,12,22,11,90\\
+解:\\
+\begin{tabular}{|c|c|c|}
+\hline
+1 & 外层循环 & 控制排序的轮数\\
+\hline
+2 & 内层循环 & 比较相邻的两个元素的大小\\
+\hline
+\end{tabular}
+\begin{lstlisting}[language=C++,breaklines=true]
+#include <iostream>
+
+using namespace std;
+
+void bubbleSort(int arr[],int size){
+	for(int i = 0; i < size - 1;i++){
+		for(int j = 0;j < size - i - 1;j++){
+			if(arr[j] > arr[j + 1]){
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+}
+
+int main(){
+	int arr[] = {64,34,25,12,22,11,90};
+	int size = sizeof(arr) / sizeof(arr[0]);
+	cout<<"Unsorted array:"<<endl;
+	for(int i = 0;i < size;i++){
+		cout<<arr[i]<<" ";
+	}
+	cout<<endl;
+	bubbleSort(arr,size);
+	cout<<"sorted array"<<endl;
+	for(int i = 0;i < size;i++){
+		cout<<arr[i]<<" ";
+	}
+	cout<<endl;
+	return 0;
+}
+\end{lstlisting}
+
 \section{sort-2021}
 【题目描述】\\
 插入排序是一种非常常见且简单的排序算法。小Z是一名大一的新生，今天 H 老
@@ -702,35 +747,20 @@ $1 \leq a_i \leq 10^9$。\\
 结束后所处的位置分别是 3, 1, 2。\\
 注意虽然此时 $a_2 = a_3$，但是我们不能将其视为相同的元素。\\
 解:\\
-【条件分析】\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
-\hline
-2 & 第$i$头牛在时间$t_i$抵达 & $0\leq t_i\leq 10^9$\\
-\hline
-3 & $M$辆巴士来运牛从机场到农场 & $1\leq M\leq 10^5$\\
-\hline
-4 & 每辆巴士最多可以容纳$C$头牛 & $1\leq C\leq N$\\
-\hline
-4 & input & 6 3 2\\
-\hline
-4 & output & 4\\
-\hline
-\end{tabular}
+
 \section{live-2020}
 直播获奖（live）\\
 【题目描述】\\
 NOI2130 即将举行。为了增加观赏性， CCF 决定逐一评出每个选手的成
-绩，并直播即时的获奖分数线。 本次竞赛的获奖率为 $�w\%$， 即当前排名前$�w\%$的选手的最低成绩就是即时的分数线。\\
-更具体地， 若当前已评出了$�p$个选手的成绩， 则当前计划获奖人数为
-$max(1,\lfloor p\times w�\%\rfloor)$， 其中$𝑤$是获奖百分比， $\lfloor x \rfloor$表示对$�x$向下取整，
-$max(�x,y�)$ 表示 $x�$ 和 $�y$� 中较大的数。如有选手成绩相同，则所有成绩并列的
+绩，并直播即时的获奖分数线。 本次竞赛的获奖率为$w\%$，即当前排名前$w\%$的选手的最低成绩就是即时的分数线。\\
+更具体地， 若当前已评出了$p$个选手的成绩， 则当前计划获奖人数为
+$max(1,\lfloor p\times w\%\rfloor)$， 其中$𝑤$是获奖百分比， $\lfloor x \rfloor$表示对$x$向下取整，
+$max(x,y)$ 表示 $x$ 和 $y$中较大的数。如有选手成绩相同，则所有成绩并列的
 选手都能获奖，因此实际获奖人数可能比计划中多。\\
 作为评测组的技术人员，请你帮 CCF 写一个直播程序。\\
 【输入格式】\\
 输入文件名为 live.in。\\
-第 1 行两个正整数$n,w$�。 分别代表选手总数与获奖率。\\
+第 1 行两个正整数$n,w$。 分别代表选手总数与获奖率。\\
 第 2 行有$n$个非负整数，依次代表逐一评出的选手成绩。\\
 【输出格式】\\
 输出文件名为 live.out。\\
@@ -742,22 +772,6 @@ $max(�x,y�)$ 表示 $x�$ 和 $�y$� 中较大的数。如有选手成�
 【样例 1 输出】\\
 200 300 400 400 400 500 400 400 300 300\\
 解:\\
-【条件分析】\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
-\hline
-2 & 第$i$头牛在时间$t_i$抵达 & $0\leq t_i\leq 10^9$\\
-\hline
-3 & $M$辆巴士来运牛从机场到农场 & $1\leq M\leq 10^5$\\
-\hline
-4 & 每辆巴士最多可以容纳$C$头牛 & $1\leq C\leq N$\\
-\hline
-4 & input & 6 3 2\\
-\hline
-4 & output & 4\\
-\hline
-\end{tabular}
 
 \section{network-2021}
 【题目描述】\\
@@ -837,40 +851,25 @@ ERR\\
 \hline
 \end{tabular}
 解:\\
-【条件分析】\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
-\hline
-2 & 第$i$头牛在时间$t_i$抵达 & $0\leq t_i\leq 10^9$\\
-\hline
-3 & $M$辆巴士来运牛从机场到农场 & $1\leq M\leq 10^5$\\
-\hline
-4 & 每辆巴士最多可以容纳$C$头牛 & $1\leq C\leq N$\\
-\hline
-4 & input & 6 3 2\\
-\hline
-4 & output & 4\\
-\hline
-\end{tabular}
+
 \section{expr-2020}
-表达式（ expr）\\
+表达式（expr）\\
 【题目描述】\\
 小$C$热衷于学习数理逻辑。有一天，他发现了一种特别的逻辑表达式。在
 这种逻辑表达式中， 所有操作数都是变量， 且它们的取值只能为0或1，运算
 从左往右进行。如果表达式中有括号，则先计算括号内的子表达式的值。特别
 的，这种表达式有且仅有以下几种运算：\\
-1. 与运算： $�a\&�b$�。当且仅当�a和�b的值都为1时，该表达式的值为1。其余情况该表达式的值为0。\\
-2. 或运算： $�a|b$。当且仅当a和b的值都为0时，该表达式的值为0。其余情况该表达式的值为 1。\\
-3. 取反运算： $!a$�。当且仅当$a$的值为0时，该表达式的值为 1。其余情况该表达式的值为 0。\\
+1. 与运算： $a\&b$。当且仅当a和b的值都为1时，该表达式的值为1。其余情况该表达式的值为0。\\
+2. 或运算： $a|b$。当且仅当a和b的值都为0时，该表达式的值为0。其余情况该表达式的值为 1。\\
+3. 取反运算： $!a$。当且仅当$a$的值为0时，该表达式的值为 1。其余情况该表达式的值为 0。\\
 小 C 想知道，给定一个逻辑表达式和其中每一个操作数的初始取值后， 再
 取反某一个操作数的值时，原表达式的值为多少。\\
 为了化简对表达式的处理，我们有如下约定：\\
 表达式将采用后缀表达式的方式输入。后缀表达式的定义如下：\\
 1. 如果$E$是一个操作数，则$E$的后缀表达式是它本身。\\
 2. 如果$E$是$E_1\quad op\quad E_2$形式的表达式，其中$op$是任何二元操作符， 且优
-先级不高于$E_1,E_2$中括号外的操作符， 则�$E$的后缀式为${E_1}'{E_2}'op$,其中${E_1}',{E_2}'$分别为$E_1,E_2$的后缀式。\\
-3. 如果$E$是$(�E_1)$形式的表达式，则$(�E_1)$的后缀式就是$E$的后缀式。\\
+先级不高于$E_1,E_2$中括号外的操作符， 则$E$的后缀式为${E_1}'{E_2}'op$,其中${E_1}',{E_2}'$分别为$E_1,E_2$的后缀式。\\
+3. 如果$E$是$(E_1)$形式的表达式，则$(E_1)$的后缀式就是$E$的后缀式。\\
 同时为了方便， 输入中：\\
 a) 与运算符（\&）、或运算符（|）、取反运算符（！）的左右均有一个空格，
 但表达式末尾没有空格。\\
@@ -881,7 +880,7 @@ b) 操作数由小写字母 x 与一个正整数拼接而成，正整数表示�
 输入文件名为 expr.in。\\
 第一行包含一个字符串$s$，表示上文描述的表达式。\\
 第二行包含一个正整数$n$，表示表达式中变量的数量。表达式中变量的下
-标为 $1,2, \cdots , n�$。\\
+标为 $1,2, \cdots , n$。\\
 第三行包含$n$个整数， 第$i$个整数表示变量$x_i$的初值。\\
 第四行包含一个正整数$q$，表示询问的个数。\\
 接下来$q$行，每行一个正整数，表示需要取反的变量的下标。注意，每一
@@ -984,22 +983,6 @@ x1 x2 \& x3 |\\
 0\\
 2 3\\
 解:\\
-【条件分析】\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
-\hline
-2 & 第$i$头牛在时间$t_i$抵达 & $0\leq t_i\leq 10^9$\\
-\hline
-3 & $M$辆巴士来运牛从机场到农场 & $1\leq M\leq 10^5$\\
-\hline
-4 & 每辆巴士最多可以容纳$C$头牛 & $1\leq C\leq N$\\
-\hline
-4 & input & 6 3 2\\
-\hline
-4 & output & 4\\
-\hline
-\end{tabular}
 \begin{lstlisting}[language=C++]
 #include <iostream>
 #include <fstream>
@@ -1008,9 +991,9 @@ x1 x2 \& x3 |\\
 using namespace std;
 
 struct node {
-    int v; // 值
-    int y; // 短路数量
-    int h; // 短路数量
+    int v; 
+    int y; 
+    int h; 
 };
 
 int main() {
@@ -1019,11 +1002,11 @@ int main() {
 
     char s[1000002];
     stack<char> q;
-    stack<node> n; // 答案 兼顾短路数量
+    stack<node> n; 
 
     fin >> s;
     int l = strlen(s);
-    s[l] = ')'; // 在末尾添加右括号，方便处理
+    s[l] = ')'; 
     q.push('(');
 
     for (int i = 0; i <= l; i++) {
@@ -1149,22 +1132,6 @@ int main() {
 按上述走法，取到的数之和为 1 + 2 + (-1) + 4 + 3 + 2 + (-1) + (-1) = 9，可
 以证明为最大值。\\
 解:\\
-【条件分析】\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
-\hline
-2 & 第$i$头牛在时间$t_i$抵达 & $0\leq t_i\leq 10^9$\\
-\hline
-3 & $M$辆巴士来运牛从机场到农场 & $1\leq M\leq 10^5$\\
-\hline
-4 & 每辆巴士最多可以容纳$C$头牛 & $1\leq C\leq N$\\
-\hline
-4 & input & 6 3 2\\
-\hline
-4 & output & 4\\
-\hline
-\end{tabular}
 
 \section{fruit-2021}
 小熊的果篮（fruit）\\
@@ -1212,22 +1179,7 @@ int main() {
 最后剩下的水果是 1，只有 1 个块。\\
 在第四次挑水果组成果篮的过程中，编号为 10 的水果被挑了出来。\\
 解:\\
-【条件分析】\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
-\hline
-2 & 第$i$头牛在时间$t_i$抵达 & $0\leq t_i\leq 10^9$\\
-\hline
-3 & $M$辆巴士来运牛从机场到农场 & $1\leq M\leq 10^5$\\
-\hline
-4 & 每辆巴士最多可以容纳$C$头牛 & $1\leq C\leq N$\\
-\hline
-4 & input & 6 3 2\\
-\hline
-4 & output & 4\\
-\hline
-\end{tabular}
+
 \section{point-2022}
 【题目描述】\\
 在一个二维平面内，给定$n$个整数点 ($x_i$, $y_i$)，此外你还可以自由添加$k$个整数点。你在自由添加$k$个点后，还需要从$n+k$个点中选出若干个整数点并组成一个序列，使得序列中任意相邻两点间的欧几里得距离恰好为1而且横坐标、纵坐标值均单调不减，即$x_{i+1} −x_i=1$, $y_{i+1}=y_i$或$y_{i+1}−y_i=1$, $x_{i+1}=x_i$。请给出满足条件的序列的最大长度。\\
@@ -1274,22 +1226,6 @@ int main() {
 \hline
 \end{tabular}\\
 解:\\
-【条件分析】\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
-\hline
-2 & 第$i$头牛在时间$t_i$抵达 & $0\leq t_i\leq 10^9$\\
-\hline
-3 & $M$辆巴士来运牛从机场到农场 & $1\leq M\leq 10^5$\\
-\hline
-4 & 每辆巴士最多可以容纳$C$头牛 & $1\leq C\leq N$\\
-\hline
-4 & input & 6 3 2\\
-\hline
-4 & output & 4\\
-\hline
-\end{tabular}
 
 \section{josephus-2021}
 （Josephus 问题）有$n$个人围成一个圈，依次标号0至$�n-1$。\\
@@ -1306,22 +1242,6 @@ $f(n,m)=(f(n-1,m)+m)\%n$\\
 然后问题转化为 n-1 个人报数的情况，并从下一个人开始重新报数。\\
 通过不断递归计算 f(n,m)，最终可以得到只剩下最后一个人的编号，即 Josephus 问题的解。\\
 解:\\
-【条件分析】\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
-\hline
-2 & 第$i$头牛在时间$t_i$抵达 & $0\leq t_i\leq 10^9$\\
-\hline
-3 & $M$辆巴士来运牛从机场到农场 & $1\leq M\leq 10^5$\\
-\hline
-4 & 每辆巴士最多可以容纳$C$头牛 & $1\leq C\leq N$\\
-\hline
-4 & input & 6 3 2\\
-\hline
-4 & output & 4\\
-\hline
-\end{tabular}
 \begin{lstlisting}[language=c++,breaklines=true]
 #include <iostream>
 
@@ -1349,51 +1269,6 @@ int main(){
 		if(F[i] == 0) // 如果F[i]为0，表示该人未被淘汰
 			ans = i; // 将该人的编号赋值给ans
 	cout << ans << endl;
-	return 0;
-}
-\end{lstlisting}
-
-\section{bubble-sort}
-冒泡排序64,34,25,12,22,11,90\\
-解:\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & 外层循环 & 控制排序的轮数\\
-\hline
-2 & 内层循环 & 比较相邻的两个元素的大小\\
-\hline
-\end{tabular}
-\begin{lstlisting}[language=C++,breaklines=true]
-#include <iostream>
-
-using namespace std;
-
-void bubbleSort(int arr[],int size){
-	for(int i = 0; i < size - 1;i++){
-		for(int j = 0;j < size - i - 1;j++){
-			if(arr[j] > arr[j + 1]){
-				int temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-			}
-		}
-	}
-}
-
-int main(){
-	int arr[] = {64,34,25,12,22,11,90};
-	int size = sizeof(arr) / sizeof(arr[0]);
-	cout<<"Unsorted array:"<<endl;
-	for(int i = 0;i < size;i++){
-		cout<<arr[i]<<" ";
-	}
-	cout<<endl;
-	bubbleSort(arr,size);
-	cout<<"sorted array"<<endl;
-	for(int i = 0;i < size;i++){
-		cout<<arr[i]<<" ";
-	}
-	cout<<endl;
 	return 0;
 }
 \end{lstlisting}
