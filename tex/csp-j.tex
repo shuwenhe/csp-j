@@ -295,6 +295,164 @@ int main(){
 }
 \end{lstlisting}
 
+\section{decode-2022}
+【题目描述】\\
+给定一个正整数$k$，有$k$次询问，每次给定三个正整数$n_i, e_i, d_i$求两个正整数$p_i
+, q_i$，使$n_i = p_i \times q_i, e_i \times d_i = (p_i − 1)(q_i − 1) + 1$。\\
+【输入格式】\\
+从文件decode.in中读入数据。\\
+第一行一个正整数$k$，表示有$k$次询问。\\
+接下来$k$行，第$i$行三个正整数 $n_i, d_i, e_i$。\\
+【输出格式】\\
+输出到文件 decode.out 中。\\
+输出$k$行，每行两个正整数$pi,qi$\\表示答案。\\
+为使输出统一，你应当保证 $pi \leq qi$。\\
+如果无解，请输出 NO。\\
+【样例 1 输入】\\
+\begin{tabular}{|c|c|c|}
+  \hline
+  1 & 10 \\
+  2 & 770 77 5 \\
+  3 & 633 1 211 \\
+  4 & 545 1 499 \\
+  5 & 683 3 227\\
+  6 & 858 3 257\\
+  7 & 723 37 13\\
+  8 & 572 26 11\\
+  9 & 867 17 17\\
+  10 & 829 3 263\\
+  11 & 528 4 109\\
+  \hline
+\end{tabular}\\
+【样例 1 输出】\\
+\begin{tabular}{|c|c|c|}
+  \hline
+  1 & 2 385 \\
+  2 & NO \\
+  3 & NO \\
+  4 & NO \\
+  5 & 11 78\\
+  6 & 3 241\\
+  7 & 2 286\\
+  8 & NO\\
+  9 & NO\\
+  10 & 6 88\\
+  \hline
+\end{tabular}\\
+【样例 2】\\
+见选手目录下的 decode/decode2.in 与 decode/decode2.ans。\\
+【样例 3】\\
+见选手目录下的 decode/decode3.in 与 decode/decode3.ans。\\
+【样例 4】\\
+见选手目录下的 decode/decode4.in 与 decode/decode4.ans。\\
+【数据范围】\\
+以下记 $m = n − e \times d + 2$。\\
+保证对于 $100\%$ 的数据，$1 \leq k \leq 10^5$，对于任意的 $1 \leq i \leq k,1 \leq n_i \leq 10^{18}
+, 1 \leq ei \times di \leq 10^{18}, 1 \leq m \leq 10^9$。\\
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  测试点编号 & k $\leq$ & n $\leq$ & m $\leq$ & 特殊性质 \\
+  \hline
+  1 & & & & 保证有解\\
+  \cline{1-1}
+  \cline{5-1}
+  2 & & $10^3$ & $10^3$ & 无\\
+  \cline{1-1}
+  \cline{3-1}
+  \cline{4-1}
+  \cline{5-1}
+  3 & & & & 保证有解\\
+  \cline{1-1}
+  \cline{5-1}
+  4 &  $10^3$ & $10^9$ & $6\times 10^4$ & 无\\
+  \cline{1-1}
+  \cline{4-1}
+  \cline{5-1}
+  5 & & & & 保证有解\\
+  \cline{1-1}
+  \cline{5-1}
+  6 & & & & 无\\
+  \cline{1-1}
+  \cline{2-1}
+  \cline{3-1}
+  \cline{5-1}
+  7 & & & & 保证若有解则 p = q\\
+  \cline{1-1}
+  \cline{5-1}
+  8 & & & $10^{9}$ & 保证有解\\
+  \cline{1-1}
+   \cline{5-1}
+  9 & $10^5$ & $10^{18}$ &  & \\
+  \cline{1-1}
+  10 & & & & 无\\
+  \hline
+\end{tabular}\\
+解:\\
+【条件分析】\\
+\begin{tabular}{|c|c|c|}
+\hline
+1 & input $n_i, e_i, d_i$ & 770 77 5\\
+\hline
+2 & output $pi,qi$ & 2 385\\
+\hline
+3 & $n_i = p_i \times q_i$ & $770 = 2\times 385$\\
+\hline
+4 & $e_i \times d_i = (p_i − 1)(q_i − 1) + 1$ & $77\times 5 = (2-1)\times(385 - 1) +1$\\
+\hline
+\end{tabular}\\
+$\because
+e_i \times d_i = (p_i − 1)(q_i − 1) + 1\\
+e_id_i = p_iq_i - (p_i + q_i) + 2$\\
+$\therefore
+p_i + q_i = p_iq_i - e_id_i + 2$\\
+令$s = p_i + q_i$\\
+则有$s = p_iq_i - e_id_i + 2$\\
+$s=n-d*e+2$
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    ifstream fin("decode.in");
+    ofstream fout("decode.out");
+    int k;
+    fin >> k;
+    for (int i = 0; i < k; i++) {
+        long long n, d, e;
+        fin >> n >> d >> e;
+        long long s = n - d * e + 2;
+        long long l = 1, r = s - 1;
+        long long p = -1, q = -1;
+
+	while (l <= r) {
+            long long mid = l + (r - l) / 2;
+            
+            if (mid * (s - mid) == n) {
+                p = mid;
+                q = s - mid;
+                break;
+            }
+            
+	        if (mid * (s - mid) < n) {
+                l = mid + 1;
+            } else {
+                r = mid - 1;
+            }
+        }
+
+        if (p != -1 && q != -1 && p <= q) {
+            fout << p << " " << q << endl;
+        } else {
+            fout << "NO" << endl;
+        }
+    }
+    fin.close();
+    fout.close();
+    return 0;
+}
+\end{lstlisting}
+
 \section{candy-2021}
 【题目背景】\\
 红太阳幼儿园的小朋友们开始分糖果啦！\\
@@ -589,168 +747,6 @@ $max(�x,y�)$ 表示 $x�$ 和 $�y$� 中较大的数。如有选手成�
 4 & output & 4\\
 \hline
 \end{tabular}
-
-\section{decode-2022}
-【题目描述】\\
-给定一个正整数$k$，有$k$次询问，每次给定三个正整数$n_i, e_i, d_i$求两个正整数$p_i
-, q_i$，使$n_i = p_i \times q_i, e_i \times d_i = (p_i − 1)(q_i − 1) + 1$。\\
-【输入格式】\\
-从文件 decode.in 中读入数据。\\
-第一行一个正整数$k$，表示有$k$次询问。\\
-接下来$k$行，第$i$行三个正整数 $n_i, d_i, e_i$。\\
-【输出格式】\\
-输出到文件 decode.out 中。\\
-输出$k$行，每行两个正整数$ pi,qi$\\表示答案。\\
-为使输出统一，你应当保证 $pi \leq qi$。\\
-如果无解，请输出 NO。\\
-【样例 1 输入】\\
-\begin{tabular}{|c|c|c|}
-  \hline
-  1 & 10 \\
-  2 & 770 77 5 \\
-  3 & 633 1 211 \\
-  4 & 545 1 499 \\
-  5 & 683 3 227\\
-  6 & 858 3 257\\
-  7 & 723 37 13\\
-  8 & 572 26 11\\
-  9 & 867 17 17\\
-  10 & 829 3 263\\
-  11 & 528 4 109\\
-  \hline
-\end{tabular}\\
-【样例 1 输出】\\
-\begin{tabular}{|c|c|c|}
-  \hline
-  1 & 2 385 \\
-  2 & NO \\
-  3 & NO \\
-  4 & NO \\
-  5 & 11 78\\
-  6 & 3 241\\
-  7 & 2 286\\
-  8 & NO\\
-  9 & NO\\
-  10 & 6 88\\
-  \hline
-\end{tabular}\\
-【样例 2】\\
-见选手目录下的 decode/decode2.in 与 decode/decode2.ans。\\
-【样例 3】\\
-见选手目录下的 decode/decode3.in 与 decode/decode3.ans。\\
-【样例 4】\\
-见选手目录下的 decode/decode4.in 与 decode/decode4.ans。\\
-【数据范围】\\
-以下记 $m = n − e \times d + 2$。\\
-保证对于 $100\%$ 的数据，$1 \leq k \leq 10^5$，对于任意的 $1 \leq i \leq k,1 \leq n_i \leq 10^{18}
-, 1 \leq ei \times di \leq 10^{18}, 1 \leq m \leq 10^9$。\\
-\begin{tabular}{|c|c|c|c|c|}
-  \hline
-  测试点编号 & k $\leq$ & n $\leq$ & m $\leq$ & 特殊性质 \\
-  \hline
-  1 & & & & 保证有解\\
-  \cline{1-1}
-  \cline{5-1}
-  2 & & $10^3$ & $10^3$ & 无\\
-  \cline{1-1}
-  \cline{3-1}
-  \cline{4-1}
-  \cline{5-1}
-  3 & & & & 保证有解\\
-  \cline{1-1}
-  \cline{5-1}
-  4 &  $10^3$ & $10^9$ & $6\times 10^4$ & 无\\
-  \cline{1-1}
-  \cline{4-1}
-  \cline{5-1}
-  5 & & & & 保证有解\\
-  \cline{1-1}
-  \cline{5-1}
-  6 & & & & 无\\
-  \cline{1-1}
-  \cline{2-1}
-  \cline{3-1}
-  \cline{5-1}
-  7 & & & & 保证若有解则 p = q\\
-  \cline{1-1}
-  \cline{5-1}
-  8 & & & $10^{9}$ & 保证有解\\
-  \cline{1-1}
-   \cline{5-1}
-  9 & $10^5$ & $10^{18}$ &  & \\
-  \cline{1-1}
-  10 & & & & 无\\
-  \hline
-\end{tabular}\\
-解:\\
-【条件分析】\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
-\hline
-2 & 第$i$头牛在时间$t_i$抵达 & $0\leq t_i\leq 10^9$\\
-\hline
-3 & $M$辆巴士来运牛从机场到农场 & $1\leq M\leq 10^5$\\
-\hline
-4 & 每辆巴士最多可以容纳$C$头牛 & $1\leq C\leq N$\\
-\hline
-4 & input & 6 3 2\\
-\hline
-4 & output & 4\\
-\hline
-\end{tabular}
-$\because
-e_i \times d_i = (p_i − 1)(q_i − 1) + 1\\
-e_id_i = p_iq_i - (p_i + q_i) + 2$\\
-$\therefore
-p_i + q_i = p_iq_i - e_id_i + 2$\\
-令$s = p_i + q_i$\\
-则有$s = p_iq_i - e_id_i + 2$\\
-$s=n-d*e+2$
-\begin{lstlisting}[language=C++]
-#include <iostream>
-#include <fstream>
-using namespace std;
-
-int main() {
-    ifstream fin("decode.in");
-    ofstream fout("decode.out");
-    int k;
-    fin >> k;
-    for (int i = 0; i < k; i++) {
-        long long n, d, e;
-        fin >> n >> d >> e;
-        long long s = n - d * e + 2;
-        long long l = 1, r = s - 1;
-        long long p = -1, q = -1;
-
-	while (l <= r) { // binary search 
-            long long mid = l + (r - l) / 2;
-            
-            if (mid * (s - mid) == n) {
-                p = mid;
-                q = s - mid;
-                break;
-            }
-            
-	        if (mid * (s - mid) < n) {
-                l = mid + 1;
-            } else {
-                r = mid - 1;
-            }
-        }
-
-        if (p != -1 && q != -1 && p <= q) {
-            fout << p << " " << q << endl;
-        } else {
-            fout << "NO" << endl;
-        }
-    }
-    fin.close();
-    fout.close();
-    return 0;
-}
-\end{lstlisting}
 
 \section{network-2021}
 【题目描述】\\
