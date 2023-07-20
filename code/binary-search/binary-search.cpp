@@ -26,6 +26,6 @@ ofstream fout("binary.out");
 vector<int> nums = {1,3,5,7,9,11,13,15};
 int target;
 fin>>target;
-binarySearch(nums,target);
-
+fout<<binarySearch(nums,target);
+return 0;
 }
