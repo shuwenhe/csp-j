@@ -267,6 +267,34 @@ int main(){
 }
 \end{lstlisting}
 
+\section{factorial}
+从factorial.in文件中读取数字num，计算num的阶乘，将结果写入文件factorial.out\\
+解:\\
+\begin{lstlisting}[language=c++,breaklines=true]
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+long long factorial(int n){
+	long long result = 1;
+	for(int i = 2; i <= n; i++){
+		result *= i;
+	}
+	return result;
+}
+
+int main(){
+	ifstream fin("factorial.in");
+	ofstream fout("factorial.out");
+	int num;
+	long long result;
+	fin>>num;
+	result = factorial(num);
+	fout<<result;
+	return 0;
+}
+\end{lstlisting}
+
 \section{candy-2021}
 【题目背景】\\
 红太阳幼儿园的小朋友们开始分糖果啦！\\
@@ -1359,34 +1387,6 @@ int main(){
 		cout<<arr[i]<<" ";
 	}
 	cout<<endl;
-	return 0;
-}
-\end{lstlisting}
-
-\section{factorial}
-从factorial.in文件中读取数字num，计算num的阶乘，将结果写入文件factorial.out\\
-解:\\
-\begin{lstlisting}[language=c++,breaklines=true]
-#include <iostream>
-#include <fstream>
-using namespace std;
-
-long long factorial(int n){
-	long long result = 1;
-	for(int i = 2; i <= n; i++){
-		result *= i;
-	}
-	return result;
-}
-
-int main(){
-	ifstream fin("factorial.in");
-	ofstream fout("factorial.out");
-	int num;
-	long long result;
-	fin>>num;
-	result = factorial(num);
-	fout<<result;
 	return 0;
 }
 \end{lstlisting}
