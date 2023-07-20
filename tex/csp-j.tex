@@ -526,9 +526,11 @@ int main(){
 \end{tabular}\\
 对于所有数据，保证 $2 \leq n \leq L \leq R \leq 10^9$\\
 解:\\
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-1 & $N$头牛抵达机场 & $1\leq N\leq 10^5$\\
+1 & input &7 16 23 & $n, L, R$ & 小朋友的个数、糖果数量的下界和上界\\
+\hline
+2 & output & 6 & k & 你最多能获得的糖果数量\\
 \hline
 \end{tabular}\\
 \begin{lstlisting}[language=C++]
@@ -561,7 +563,7 @@ int main(){
 分下$n$被分解为了若干个不同的2的正整数次幂。注意，一个数$x$能被表
 示成2的正整数次幂，当且仅当$x$能通过正整数个2相乘在一起得到。\\
 例如， $10 = 8 + 2 = 2^3 + 2^1$ 是一个优秀的拆分。但是， $7 = 4 + 2 + 1 =
-2^2 + 2^1 + 2^0$ 就不是一个优秀的拆分，因为 1 不是 2 的正整数次幂。\\
+2^2 + 2^1 + 2^0$ 就不是一个优秀的拆分，因为1不是2的正整数次幂。\\
 现在，给定正整数$n$，你需要判断这个数的所有拆分中，是否存在优秀的
 拆分。 若存在， 请你给出具体的拆分方案。\\
 【输入格式】\\
@@ -591,7 +593,17 @@ $6 = 4 + 2 = 2^2 + 2^1$ 是一个优秀的拆分。注意， 6 = 2 + 2 + 2 不�
 对于另外20\%的数据，保证$n$为奇数。\\
 对于另外20\%的数据，保证$n$为2的正整数次幂。\\
 对于 80\% 的数据， $n\leq 1024$。\\
-对于 100\% 的数据， $1\leq n\leq 1\times10^7$。
+对于 100\% 的数据， $1\leq n\leq 1\times10^7$。\\
+解:\\
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+1 & input &6 & 7\\
+\hline
+2 & output & 4 2 & -1\\
+\hline
+3 & $2^1,2^2,...,2^n$ & $power = 1\ll i$& \\
+\hline
+\end{tabular}\\
 \begin{lstlisting}[language=C++,breaklines=true]
 #include <iostream>
 #include <fstream>
@@ -605,14 +617,14 @@ int main(){
 	int n;
 	vector<int> partition;
 	fin>>n;
-	for(int i = 30;i >= 0;i--){
+	for(int i = 30; i >= 0; i--){
 		int power = 1<<i;
 		if(n >= power){
 			partition.push_back(power);
 			n -= power;
 		}
 	}
-	for(int i;i <=partition.size();i++){
+	for(int i = 0; i <= partition.size();i++){
 		if(partition[i] != 0){
 			fout<<partition[i];
 			fout<<" ";

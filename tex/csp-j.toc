@@ -11,9 +11,9 @@
 \contentsline {section}{\numberline {9}live-2020}{18}{section.0.1.9}%
 \contentsline {section}{\numberline {10}network-2021}{19}{section.0.1.10}%
 \contentsline {section}{\numberline {11}expr-2020}{21}{section.0.1.11}%
-\contentsline {section}{\numberline {12}expr-2022}{22}{section.0.1.12}%
-\contentsline {section}{\numberline {13}number-2020}{27}{section.0.1.13}%
-\contentsline {section}{\numberline {14}fruit-2021}{28}{section.0.1.14}%
+\contentsline {section}{\numberline {12}expr-2022}{23}{section.0.1.12}%
+\contentsline {section}{\numberline {13}number-2020}{28}{section.0.1.13}%
+\contentsline {section}{\numberline {14}fruit-2021}{29}{section.0.1.14}%
 \contentsline {section}{\numberline {15}point-2022}{30}{section.0.1.15}%
 \contentsline {section}{\numberline {16}josephus-2021}{31}{section.0.1.16}%
 \contentsline {section}{\numberline {17}bubble-sort}{33}{section.0.1.17}%
