@@ -11,9 +11,13 @@ int main(){
 	fin>>a>>b;
 
 	long long result = 1;           
-	for(int i = 0; i < b;i++){ 
+	for(int i = 1; i <= b;i++){ 
 		result *= a;
 	}
-	fout<<result;
+	if(result > 1000000000){
+		fout<<-1;
+	}else{
+		fout<<result;
+	}
 	return 0;
 }
