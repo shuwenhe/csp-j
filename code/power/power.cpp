@@ -13,7 +13,6 @@ int main(){
 	for(int i = 30; i >= 0; i--){
 		int power = 1<<i;
 		if(n >= power){
-			cout<<"power = "<<power<<endl;
 			partition.push_back(power);
 			n -= power;
 		}
