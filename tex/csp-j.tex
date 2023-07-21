@@ -72,8 +72,8 @@
 % 北京大学\\
 % ShuwenHe\\
 % 何书文\\
-% 1201220707@pku.edu.cn
-Shuwen \& Richard \& Ritchie
+Shuwen He
+1201220707@pku.edu.cn
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,6 +97,7 @@ Shuwen \& Richard \& Ritchie
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{csp-j}
+<<<<<<< HEAD
 \section{gcd}
 求gcd.in中两个数的最大公约数，并将其输出到gcd.out。
 解:\\
@@ -125,10 +126,182 @@ int main(){
     fin>>a>>b;
     int num = gcd(a,b);
     fout<<num;
+=======
+\section{expr-2022-3}
+【题目描述】\\
+逻辑表达式是计算机科学中的重要概念和工具，包含逻辑值、逻辑运算、逻辑运算
+优先级等内容。\\
+在一个逻辑表达式中，元素的值只有两种可能：0 （表示假）和1 （表示真）。元素
+之间有多种可能的逻辑运算，本题中只需考虑如下两种：“与”（符号为\&）和“或”（符
+号为|）。其运算规则如下：\\
+0\&0 = 0\&1 = 1\&0 = 0，1\&1 = 1；\\
+0|0 = 0，0|1 = 1|0 = 1|1 = 1。\\
+在一个逻辑表达式中还可能有括号。规定在运算时，括号内的部分先运算；两种运
+算并列时，\& 运算优先于| 运算；同种运算并列时，从左向右运算。\\
+比如，表达式0|1\&0 的运算顺序等同于0|(1\&0) ；表达式0\&1\&0|1 的运算顺序等
+同于((0\&1)\&0)|1。\\
+此外，在C++ 等语言的有些编译器中，对逻辑表达式的计算会采用一种“短路”
+的策略。：在形如a\&b 的逻辑表达式中，会先计算a 部分的值，如果a = 0 ，那么整个
+逻辑表达式的值就一定为0，故无需再计算b 部分的值；同理，在形如a|b 的逻辑表达
+式中，会先计算a 部分的值，如果a = 1 ，那么整个逻辑表达式的值就一定为1，无需
+再计算b 部分的值。\\
+现在给你一个逻辑表达式，你需要计算出它的值，并且统计出在计算过程中，两种
+类型的“短路”各出现了多少次。需要注意的是，如果某处“短路”包含在更外层被“短
+路”的部分内则不被统计，如表达式1|(0\&1) 中，尽管0\&1 是一处“短路”，但由于外
+层的1|(0\&1) 本身就是一处“短路”，无需再计算0\&1 部分的值，因此不应当把这里的
+0\&1 计入一处“短路”。\\
+【输入格式】\\
+从文件expr.in 中读入数据。\\
+输入共一行，一个非空字符串s 表示待计算的逻辑表达式。\\
+【输出格式】\\
+输出到文件expr.out 中。\\
+输出共两行，第一行输出一个字符0 或1 ，表示这个逻辑表达式的值；第二行输
+出两个非负整数，分别表示计算上述逻辑表达式的过程中，形如a/\&b 和a|b 的“短路”
+各出现了多少次。\\
+【样例1 输入】\\
+0\&(1|0)|(1|1|1\&0)\\
+【样例1 输出】\\
+1\\
+1 2\\
+【样例1 解释】\\
+该逻辑表达式的计算过程如下，每一行的注释表示上一行计算的过程：\\
+0\&(1|0)|(1|1|1\&0)\\
+=(0\&(1|0))|((1|1)|(1\&0)) //用括号标明计算顺序\\
+=0|((1|1)|(1\&0)) //先计算最左侧的\&，是一次形如a\&b的“短路”\\
+=0|(1|(1\&0)) //再计算中间的|，是一次形如a|b的“短路”\\
+=0|1 //再计算中间的|，是一次形如a|b的“短路”\\
+=1\\
+【样例2 输入】\\
+(0|1\&0|1|1|(1|1))\&(0\&1\&(1|0)|0|1|0)\&0\\
+【样例2 输出】\\
+0\\
+2 3\\
+解:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <fstream>
+#include <stack>
+#include <cstring>
+using namespace std;
+
+struct node {
+    int v; 
+    int y; 
+    int h; 
+};
+
+int main() {
+    ifstream fin("expr.in");
+    ofstream fout("expr.out");
+
+    char s[1000002];
+    stack<char> q;
+    stack<node> n; 
+
+    fin >> s;
+    int l = strlen(s);
+    s[l] = ')'; 
+    q.push('(');
+
+    for (int i = 0; i <= l; i++) {
+        if (s[i] == '(') {
+            q.push(s[i]);
+        }
+        else if (s[i] == '0' || s[i] == '1') {
+            node temp;
+            temp.v = s[i] - '0';
+            temp.y = 0;
+            temp.h = 0;
+            n.push(temp);
+        }
+        else {
+            bool fff = false;
+            if (s[i] == ')') {
+                fff = true;
+                if (q.top() == '(') {
+                    q.pop();
+                }
+                else {
+                while (!n.empty() && !q.empty() && 
+                (q.top() == '&' || q.top() == '|')) {
+                        char z = q.top();
+                        q.pop();
+                        node a = n.top();
+                        n.pop();
+                        node b = n.top();
+                        n.pop();
+                        node temp;
+                        temp.y = b.y;
+                        temp.h = b.h;
+                        if (z == '&') {
+                            if (b.v == 0) temp.y++;
+                            else {
+                                temp.y += a.y;
+                                temp.h += a.h;
+                            }
+                            temp.v = a.v & b.v;
+                        }
+                        if (z == '|') {
+                            if (b.v == 1) temp.h++;
+                            else {
+                                temp.h += a.h;
+                                temp.y += a.y;
+                            }
+                            temp.v = a.v | b.v;
+                        }
+                        n.push(temp);
+                    }
+                    q.pop();
+                }
+            }
+            if (!n.empty() && !q.empty()) {
+            while ((q.top() == '&' && (s[i] == '&' || s[i] == '|')) || 
+            (q.top() == '|' && s[i] == '|')) {
+                    char z = q.top();
+                    q.pop();
+                    node a = n.top();
+                    n.pop();
+                    node b = n.top();
+                    n.pop();
+                    node temp;
+                    temp.y = b.y;
+                    temp.h = b.h;
+                    if (z == '&') {
+                        if (b.v == 0) temp.y++;
+                        else {
+                            temp.y += a.y;
+                            temp.h += a.h;
+                        }
+                        temp.v = a.v & b.v;
+                    }
+                    if (z == '|') {
+                        if (b.v == 1) temp.h++;
+                        else {
+                            temp.h += a.h;
+                            temp.y += a.y;
+                        }
+                        temp.v = a.v | b.v;
+                    }
+                    n.push(temp);
+                }
+            }
+            if (fff == false)
+                q.push(s[i]);
+        }
+    }
+    
+    fout << n.top().v << endl;
+    fout << n.top().y << ' ' << n.top().h << endl;
+
+    fin.close();
+    fout.close();
+
+>>>>>>> 1d9b16bfffbddf142671711fe553fe73e11fed9e
     return 0;
 }
 \end{lstlisting}
 
+<<<<<<< HEAD
 
 \section{prime}
 判断prime.in中的数是否是素数，如果是输出1到prime.out否则输出0。
@@ -157,6 +330,9 @@ int main(){
 }
 \end{lstlisting}
 \section{pow-2022}
+=======
+\section{pow-2022-1}
+>>>>>>> 1d9b16bfffbddf142671711fe553fe73e11fed9e
 【题目描述】\\
 小文同学刚刚接触了信息学竞赛，有一天她遇到了这样一个题：给定正整数a和b，求$a^b$的值是多少。\\
 $a^b$即b个a相乘的值，例如$2^3$即为3个2相乘，结果为$2\times2\times2=8$。\\
@@ -186,7 +362,7 @@ $a^b$即b个a相乘的值，例如$2^3$即为3个2相乘，结果为$2\times2\ti
 对于 $60\%$ 的数据，保证 $b \leq 30, a^b \leq 10^{18}$\\
 对于 $100\%$ 的数据，保证 $1 \leq a, b \leq 10^9$\\
 解:\\
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|}
 \hline
 1 & result *= a;\\
 \hline
@@ -204,70 +380,19 @@ int main(){
 	int a,b;
 	fin>>a>>b;
 	long long result = 1;
-	for(int i = 0; i < b; i++){
+	for(int i = 1; i <= b; i++){
 		result *= a;
-		if (result > 1000000000){
-			fout<<-1<<endl;
+		if(result > 1e9){
+			fout<<-1;
 			return 0;
 		}
 	}
-	fout<<result<<endl;
-
-	fin.close();
-	fout.close();
-
+	fout<<result;
 	return 0;
 }
 \end{lstlisting}
 
-\section{binary-search}
-用二分搜索找到元素7并输出元素下标，1, 3, 5, 7, 9, 11, 13, 15\\
-解:\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & mid = left + (right - left) / 2 &\\
-\hline
-2 & nums[mid] < target & left = mid + 1\\
-\hline
-3 & else & right = mid - 1\\
-\hline
-\end{tabular}
-\begin{lstlisting}[language=C++,breaklines=true]
-#include <iostream>
-#include <fstream>
-#include <vector>
-
-using namespace std;
-
-int binarySearch(vector<int>& nums,int target){
-	int left = 0;
-	int right = nums.size()-1;
-
-	while(left <= right){
-	int mid = left+(right - left)/2; 
-	if(nums[mid] == target){
-		return mid;
-	}else if(nums[mid] < target){
-		left = mid + 1;
-	}else{
-		right = mid - 1;
-		}
-	}
-	return -1;
-}
-
-int main(){
-	ifstream fin("binary.in");
-	ofstream fout("binary.out");
-	vector<int> nums = {1,3,5,7,9,11,13,15};
-	int target;
-	fin>>target;
-	fout<<binarySearch(nums,target)<<endl;
-	return 0;
-}
-\end{lstlisting}
-
-\section{number-2019}
+\section{number-2019-1}
 【题目描述】\\
 小$K$同学向小$P$同学发送了一个长度为8的01字符串来玩数字游戏，小$P$同学想要知道字符串中究竟有多少个1。\\
 注意：01字符串为每一个字符是0或者1的字符串，如“101”（不含双引号）为一个长度为3的01字符串。\\
@@ -329,35 +454,7 @@ int main(){
 }
 \end{lstlisting}
 
-\section{factorial}
-从factorial.in文件中读取数字num，计算num的阶乘，将结果写入文件factorial.out\\
-解:\\
-\begin{lstlisting}[language=c++,breaklines=true]
-#include <iostream>
-#include <fstream>
-using namespace std;
-
-long long factorial(int n){
-	long long result = 1;
-	for(int i = 2; i <= n; i++){
-		result *= i;
-	}
-	return result;
-}
-
-int main(){
-	ifstream fin("factorial.in");
-	ofstream fout("factorial.out");
-	int num;
-	long long result;
-	fin>>num;
-	result = factorial(num);
-	fout<<result;
-	return 0;
-}
-\end{lstlisting}
-
-\section{decode-2022}
+\section{decode-2022-2}
 【题目描述】\\
 给定一个正整数$k$，有$k$次询问，每次给定三个正整数$n_i, e_i, d_i$求两个正整数$p_i
 , q_i$，使$n_i = p_i \times q_i, e_i \times d_i = (p_i − 1)(q_i − 1) + 1$。\\
@@ -648,7 +745,7 @@ $6 = 4 + 2 = 2^2 + 2^1$ 是一个优秀的拆分。注意， 6 = 2 + 2 + 2 不�
 【样例 3】\\
 见选手目录下的 power/power3.in 与 power/power3.ans。\\
 【数据范围与提示】\\
-对于 20\% 的数据，$n/leq 10$。\\
+对于 20\% 的数据，$n\leq 10$。\\
 对于另外20\%的数据，保证$n$为奇数。\\
 对于另外20\%的数据，保证$n$为2的正整数次幂。\\
 对于 80\% 的数据， $n\leq 1024$。\\
@@ -691,51 +788,6 @@ int main(){
 	}
 	fin.close();
 	fout.close();
-	return 0;
-}
-\end{lstlisting}
-
-\section{bubble-sort}
-冒泡排序64,34,25,12,22,11,90\\
-解:\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & 外层循环 & 控制排序的轮数\\
-\hline
-2 & 内层循环 & 比较相邻的两个元素的大小\\
-\hline
-\end{tabular}
-\begin{lstlisting}[language=C++,breaklines=true]
-#include <iostream>
-
-using namespace std;
-
-void bubbleSort(int arr[],int size){
-	for(int i = 0; i < size - 1;i++){
-		for(int j = 0;j < size - i - 1;j++){
-			if(arr[j] > arr[j + 1]){
-				int temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-			}
-		}
-	}
-}
-
-int main(){
-	int arr[] = {64,34,25,12,22,11,90};
-	int size = sizeof(arr) / sizeof(arr[0]);
-	cout<<"Unsorted array:"<<endl;
-	for(int i = 0;i < size;i++){
-		cout<<arr[i]<<" ";
-	}
-	cout<<endl;
-	bubbleSort(arr,size);
-	cout<<"sorted array"<<endl;
-	for(int i = 0;i < size;i++){
-		cout<<arr[i]<<" ";
-	}
-	cout<<endl;
 	return 0;
 }
 \end{lstlisting}
@@ -992,179 +1044,6 @@ x1 x2 \& x3 |\\
   \hline
 \end{tabular}
 
-\section{expr-2022}
-【题目描述】\\
-逻辑表达式是计算机科学中的重要概念和工具，包含逻辑值、逻辑运算、逻辑运算
-优先级等内容。\\
-在一个逻辑表达式中，元素的值只有两种可能：0 （表示假）和1 （表示真）。元素
-之间有多种可能的逻辑运算，本题中只需考虑如下两种：“与”（符号为\&）和“或”（符
-号为|）。其运算规则如下：\\
-0\&0 = 0\&1 = 1\&0 = 0，1\&1 = 1；\\
-0|0 = 0，0|1 = 1|0 = 1|1 = 1。\\
-在一个逻辑表达式中还可能有括号。规定在运算时，括号内的部分先运算；两种运
-算并列时，\& 运算优先于| 运算；同种运算并列时，从左向右运算。\\
-比如，表达式0|1\&0 的运算顺序等同于0|(1\&0) ；表达式0\&1\&0|1 的运算顺序等
-同于((0\&1)\&0)|1。\\
-此外，在C++ 等语言的有些编译器中，对逻辑表达式的计算会采用一种“短路”
-的策略。：在形如a\&b 的逻辑表达式中，会先计算a 部分的值，如果a = 0 ，那么整个
-逻辑表达式的值就一定为0，故无需再计算b 部分的值；同理，在形如a|b 的逻辑表达
-式中，会先计算a 部分的值，如果a = 1 ，那么整个逻辑表达式的值就一定为1，无需
-再计算b 部分的值。\\
-现在给你一个逻辑表达式，你需要计算出它的值，并且统计出在计算过程中，两种
-类型的“短路”各出现了多少次。需要注意的是，如果某处“短路”包含在更外层被“短
-路”的部分内则不被统计，如表达式1|(0\&1) 中，尽管0\&1 是一处“短路”，但由于外
-层的1|(0\&1) 本身就是一处“短路”，无需再计算0\&1 部分的值，因此不应当把这里的
-0\&1 计入一处“短路”。\\
-【输入格式】\\
-从文件expr.in 中读入数据。\\
-输入共一行，一个非空字符串s 表示待计算的逻辑表达式。\\
-【输出格式】\\
-输出到文件expr.out 中。\\
-输出共两行，第一行输出一个字符0 或1 ，表示这个逻辑表达式的值；第二行输
-出两个非负整数，分别表示计算上述逻辑表达式的过程中，形如a/\&b 和a|b 的“短路”
-各出现了多少次。\\
-【样例1 输入】\\
-0/\&(1|0)|(1|1|1/\&0)\\
-【样例1 输出】\\
-1\\
-1 2\\
-【样例1 解释】\\
-该逻辑表达式的计算过程如下，每一行的注释表示上一行计算的过程：\\
-0\&(1|0)|(1|1|1\&0)\\
-=(0\&(1|0))|((1|1)|(1\&0)) //用括号标明计算顺序\\
-=0|((1|1)|(1\&0)) //先计算最左侧的\&，是一次形如a\&b的“短路”\\
-=0|(1|(1\&0)) //再计算中间的|，是一次形如a|b的“短路”\\
-=0|1 //再计算中间的|，是一次形如a|b的“短路”\\
-=1\\
-【样例2 输入】\\
-(0|1\&0|1|1|(1|1))\&(0\&1\&(1|0)|0|1|0)\&0\\
-【样例2 输出】\\
-0\\
-2 3\\
-解:\\
-\begin{lstlisting}[language=C++]
-#include <iostream>
-#include <fstream>
-#include <stack>
-#include <cstring>
-using namespace std;
-
-struct node {
-    int v; 
-    int y; 
-    int h; 
-};
-
-int main() {
-    ifstream fin("expr.in");
-    ofstream fout("expr.out");
-
-    char s[1000002];
-    stack<char> q;
-    stack<node> n; 
-
-    fin >> s;
-    int l = strlen(s);
-    s[l] = ')'; 
-    q.push('(');
-
-    for (int i = 0; i <= l; i++) {
-        if (s[i] == '(') {
-            q.push(s[i]);
-        }
-        else if (s[i] == '0' || s[i] == '1') {
-            node temp;
-            temp.v = s[i] - '0';
-            temp.y = 0;
-            temp.h = 0;
-            n.push(temp);
-        }
-        else {
-            bool fff = false;
-            if (s[i] == ')') {
-                fff = true;
-                if (q.top() == '(') {
-                    q.pop();
-                }
-                else {
-                while (!n.empty() && !q.empty() && 
-                (q.top() == '&' || q.top() == '|')) {
-                        char z = q.top();
-                        q.pop();
-                        node a = n.top();
-                        n.pop();
-                        node b = n.top();
-                        n.pop();
-                        node temp;
-                        temp.y = b.y;
-                        temp.h = b.h;
-                        if (z == '&') {
-                            if (b.v == 0) temp.y++;
-                            else {
-                                temp.y += a.y;
-                                temp.h += a.h;
-                            }
-                            temp.v = a.v & b.v;
-                        }
-                        if (z == '|') {
-                            if (b.v == 1) temp.h++;
-                            else {
-                                temp.h += a.h;
-                                temp.y += a.y;
-                            }
-                            temp.v = a.v | b.v;
-                        }
-                        n.push(temp);
-                    }
-                    q.pop();
-                }
-            }
-            if (!n.empty() && !q.empty()) {
-            while ((q.top() == '&' && (s[i] == '&' || s[i] == '|')) || 
-            (q.top() == '|' && s[i] == '|')) {
-                    char z = q.top();
-                    q.pop();
-                    node a = n.top();
-                    n.pop();
-                    node b = n.top();
-                    n.pop();
-                    node temp;
-                    temp.y = b.y;
-                    temp.h = b.h;
-                    if (z == '&') {
-                        if (b.v == 0) temp.y++;
-                        else {
-                            temp.y += a.y;
-                            temp.h += a.h;
-                        }
-                        temp.v = a.v & b.v;
-                    }
-                    if (z == '|') {
-                        if (b.v == 1) temp.h++;
-                        else {
-                            temp.h += a.h;
-                            temp.y += a.y;
-                        }
-                        temp.v = a.v | b.v;
-                    }
-                    n.push(temp);
-                }
-            }
-            if (fff == false)
-                q.push(s[i]);
-        }
-    }
-    
-    fout << n.top().v << endl;
-    fout << n.top().y << ' ' << n.top().h << endl;
-
-    fin.close();
-    fout.close();
-
-    return 0;
-}
-\end{lstlisting}
-
 \section{number-2020}
 方格取数（ number）\\
 【题目描述】\\
@@ -1239,7 +1118,7 @@ int main() {
 在第四次挑水果组成果篮的过程中，编号为 10 的水果被挑了出来。\\
 解:\\
 
-\section{point-2022}
+\section{point-2022-4}
 【题目描述】\\
 在一个二维平面内，给定$n$个整数点 ($x_i$, $y_i$)，此外你还可以自由添加$k$个整数点。你在自由添加$k$个点后，还需要从$n+k$个点中选出若干个整数点并组成一个序列，使得序列中任意相邻两点间的欧几里得距离恰好为1而且横坐标、纵坐标值均单调不减，即$x_{i+1} −x_i=1$, $y_{i+1}=y_i$或$y_{i+1}−y_i=1$, $x_{i+1}=x_i$。请给出满足条件的序列的最大长度。\\
 【输入格式】\\
@@ -1329,109 +1208,6 @@ int main(){
 			ans = i; // 将该人的编号赋值给ans
 	cout << ans << endl;
 	return 0;
-}
-\end{lstlisting}
-
-\section{dijkstra}
-解:\\
-\begin{lstlisting}[language=C++,breaklines=true]
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <limits>
-
-#define INF std::numeric_limits<int>::max()
-
-// Structure to represent a node and its distance from the source
-struct Node {
-    int vertex;
-    int distance;
-
-    bool operator>(const Node& other) const {
-        return distance > other.distance;
-    }
-};
-
-// Graph class
-class Graph {
-    int numVertices;
-    std::vector<std::vector<std::pair<int, int>>> adjacencyList;
-
-public:
-    Graph(int vertices) : numVertices(vertices) {
-        adjacencyList.resize(numVertices);
-    }
-
-    void addEdge(int source, int destination, int weight) {
-        adjacencyList[source].push_back(std::make_pair(destination, weight));
-        adjacencyList[destination].push_back(std::make_pair(source, weight));
-    }
-
-    void dijkstra(int source) {
-        std::vector<int> distance(numVertices, INF); // Initialize distances as infinity
-        std::vector<bool> visited(numVertices, false); // Mark all nodes as not visited
-        std::priority_queue<Node, std::vector<Node>, std::greater<Node>> pq; // Priority queue to get the node with the minimum distance
-
-        // Distance from source to itself is 0
-        distance[source] = 0;
-        pq.push({source, 0});
-
-        while (!pq.empty()) {
-            int u = pq.top().vertex;
-            pq.pop();
-
-            if (visited[u])
-                continue;
-
-            visited[u] = true;
-
-            for (const auto& neighbor : adjacencyList[u]) {
-                int v = neighbor.first;
-                int weight = neighbor.second;
-
-                int newDistance = distance[u] + weight;
-
-                if (newDistance < distance[v]) {
-                    distance[v] = newDistance;
-                    pq.push({v, newDistance});
-                }
-            }
-        }
-
-        // Print the shortest distances from the source
-        std::cout << "Shortest distances from source " << source << ":\n";
-        for (int i = 0; i < numVertices; ++i) {
-            std::cout << "Vertex " << i << ": ";
-            if (distance[i] == INF)
-                std::cout << "INF\n";
-            else
-                std::cout << distance[i] << "\n";
-        }
-    }
-};
-
-int main() {
-    // Create a graph
-    int numVertices = 6;
-    Graph graph(numVertices);
-
-    // Add edges to the graph
-    graph.addEdge(0, 1, 4);
-    graph.addEdge(0, 2, 2);
-    graph.addEdge(1, 2, 1);
-    graph.addEdge(1, 3, 5);
-    graph.addEdge(2, 3, 8);
-    graph.addEdge(2, 4, 10);
-    graph.addEdge(3, 4, 2);
-    graph.addEdge(3, 5, 6);
-    graph.addEdge(4, 5, 3);
-
-    int source = 0; // Set the source vertex
-
-    // Run Dijkstra's algorithm
-    graph.dijkstra(source);
-
-    return 0;
 }
 \end{lstlisting}
 

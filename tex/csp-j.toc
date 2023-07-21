@@ -1,20 +1,16 @@
 \contentsline {chapter}{目录}{2}{chapter*.1}%
 \contentsline {chapter}{\numberline {第一章\hspace {.3em}}csp-j}{4}{chapter.0.1}%
-\contentsline {section}{\numberline {1}pow-2022}{4}{section.0.1.1}%
-\contentsline {section}{\numberline {2}binary-search}{6}{section.0.1.2}%
-\contentsline {section}{\numberline {3}number-2019}{7}{section.0.1.3}%
-\contentsline {section}{\numberline {4}factorial}{8}{section.0.1.4}%
-\contentsline {section}{\numberline {5}decode-2022}{9}{section.0.1.5}%
-\contentsline {section}{\numberline {6}candy-2021}{12}{section.0.1.6}%
-\contentsline {section}{\numberline {7}power-2020}{14}{section.0.1.7}%
-\contentsline {section}{\numberline {8}bubble-sort}{16}{section.0.1.8}%
-\contentsline {section}{\numberline {9}sort-2021}{17}{section.0.1.9}%
-\contentsline {section}{\numberline {10}live-2020}{19}{section.0.1.10}%
-\contentsline {section}{\numberline {11}network-2021}{19}{section.0.1.11}%
-\contentsline {section}{\numberline {12}expr-2020}{21}{section.0.1.12}%
-\contentsline {section}{\numberline {13}expr-2022}{23}{section.0.1.13}%
-\contentsline {section}{\numberline {14}number-2020}{28}{section.0.1.14}%
-\contentsline {section}{\numberline {15}fruit-2021}{29}{section.0.1.15}%
-\contentsline {section}{\numberline {16}point-2022}{30}{section.0.1.16}%
-\contentsline {section}{\numberline {17}josephus-2021}{31}{section.0.1.17}%
-\contentsline {section}{\numberline {18}dijkstra}{32}{section.0.1.18}%
+\contentsline {section}{\numberline {1}expr-2022-3}{4}{section.0.1.1}%
+\contentsline {section}{\numberline {2}pow-2022-1}{8}{section.0.1.2}%
+\contentsline {section}{\numberline {3}number-2019-1}{10}{section.0.1.3}%
+\contentsline {section}{\numberline {4}decode-2022-2}{11}{section.0.1.4}%
+\contentsline {section}{\numberline {5}candy-2021}{14}{section.0.1.5}%
+\contentsline {section}{\numberline {6}power-2020}{17}{section.0.1.6}%
+\contentsline {section}{\numberline {7}sort-2021}{19}{section.0.1.7}%
+\contentsline {section}{\numberline {8}live-2020}{20}{section.0.1.8}%
+\contentsline {section}{\numberline {9}network-2021}{21}{section.0.1.9}%
+\contentsline {section}{\numberline {10}expr-2020}{23}{section.0.1.10}%
+\contentsline {section}{\numberline {11}number-2020}{25}{section.0.1.11}%
+\contentsline {section}{\numberline {12}fruit-2021}{26}{section.0.1.12}%
+\contentsline {section}{\numberline {13}point-2022-4}{27}{section.0.1.13}%
+\contentsline {section}{\numberline {14}josephus-2021}{28}{section.0.1.14}%
