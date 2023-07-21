@@ -97,6 +97,66 @@ Shuwen \& Richard \& Ritchie
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{csp-j}
+\section{gcd}
+求gcd.in中两个数的最大公约数，并将其输出到gcd.out。
+解:\\
+\begin{tabular}{|c|c|}
+\hline
+1 & 两个整数的最大公约数等于其中较小的那个数和两数相除余数的最大公约数\\
+\hline
+1 & $gcd(a,b) = gcd(b,a mod b)$\\
+\hline
+\end{tabular}
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int gcd(int a,int b){
+    return b ? gcd(b,a%b) : a;
+}
+
+int main(){
+    ifstream fin("gcd.in");
+    ofstream fout("gcd.out");
+
+    int a,b;
+    fin>>a>>b;
+    int num = gcd(a,b);
+    fout<<num;
+    return 0;
+}
+\end{lstlisting}
+
+
+\section{prime}
+判断prime.in中的数是否是素数，如果是输出1到prime.out否则输出0。
+\begin{lstlisting}[language=C++]
+#include<iostream>
+#include<fstream>
+
+using namespace std;
+
+bool is_prime(int num){
+    if (num < 2) return false;
+    for (int i = 2; i <= num/i; i++)
+        if (num % i == 0)
+            return false;
+    return true;
+}
+
+int main(){
+    ifstream fin("prime.in");
+    ofstream fout("prime.out");
+    int num;
+    fin>>num;
+    bool b = is_prime(num);
+    fout<<b;
+    return 0;
+}
+\end{lstlisting}
+
 \section{pow-2022}
 【题目描述】\\
 小文同学刚刚接触了信息学竞赛，有一天她遇到了这样一个题：给定正整数a和b，求$a^b$的值是多少。\\
@@ -127,7 +187,7 @@ $a^b$即b个a相乘的值，例如$2^3$即为3个2相乘，结果为$2\times2\ti
 对于 $60\%$ 的数据，保证 $b \leq 30, a^b \leq 10^{18}$\\
 对于 $100\%$ 的数据，保证 $1 \leq a, b \leq 10^9$\\
 解:\\
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|}
 \hline
 1 & result *= a;\\
 \hline
