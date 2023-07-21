@@ -2,6 +2,7 @@
 #include <fstream>
 #include <stack>
 #include <cstring>
+
 using namespace std;
 
 struct node {
