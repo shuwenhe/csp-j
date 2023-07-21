@@ -97,66 +97,6 @@ Shuwen \& Richard \& Ritchie
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{csp-j}
-\section{gcd}
-求gcd.in中两个数的最大公约数，并将其输出到gcd.out。
-解:\\
-\begin{tabular}{|c|c|}
-\hline
-1 & 两个整数的最大公约数等于其中较小的那个数和两数相除余数的最大公约数\\
-\hline
-1 & $gcd(a,b) = gcd(b,a mod b)$\\
-\hline
-\end{tabular}
-\begin{lstlisting}[language=C++]
-#include <iostream>
-#include <fstream>
-
-using namespace std;
-
-int gcd(int a,int b){
-    return b ? gcd(b,a%b) : a;
-}
-
-int main(){
-    ifstream fin("gcd.in");
-    ofstream fout("gcd.out");
-
-    int a,b;
-    fin>>a>>b;
-    int num = gcd(a,b);
-    fout<<num;
-    return 0;
-}
-\end{lstlisting}
-
-
-\section{prime}
-判断prime.in中的数是否是素数，如果是输出1到prime.out否则输出0。
-\begin{lstlisting}[language=C++]
-#include<iostream>
-#include<fstream>
-
-using namespace std;
-
-bool is_prime(int num){
-    if (num < 2) return false;
-    for (int i = 2; i <= num/i; i++)
-        if (num % i == 0)
-            return false;
-    return true;
-}
-
-int main(){
-    ifstream fin("prime.in");
-    ofstream fout("prime.out");
-    int num;
-    fin>>num;
-    bool b = is_prime(num);
-    fout<<b;
-    return 0;
-}
-\end{lstlisting}
-
 \section{pow-2022}
 【题目描述】\\
 小文同学刚刚接触了信息学竞赛，有一天她遇到了这样一个题：给定正整数a和b，求$a^b$的值是多少。\\
@@ -221,53 +161,6 @@ int main(){
 }
 \end{lstlisting}
 
-\section{binary-search}
-用二分搜索找到元素7并输出元素下标，1, 3, 5, 7, 9, 11, 13, 15\\
-解:\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & mid = left + (right - left) / 2 &\\
-\hline
-2 & nums[mid] < target & left = mid + 1\\
-\hline
-3 & else & right = mid - 1\\
-\hline
-\end{tabular}
-\begin{lstlisting}[language=C++,breaklines=true]
-#include <iostream>
-#include <fstream>
-#include <vector>
-
-using namespace std;
-
-int binarySearch(vector<int>& nums,int target){
-	int left = 0;
-	int right = nums.size()-1;
-
-	while(left <= right){
-	int mid = left+(right - left)/2; 
-	if(nums[mid] == target){
-		return mid;
-	}else if(nums[mid] < target){
-		left = mid + 1;
-	}else{
-		right = mid - 1;
-		}
-	}
-	return -1;
-}
-
-int main(){
-	ifstream fin("binary.in");
-	ofstream fout("binary.out");
-	vector<int> nums = {1,3,5,7,9,11,13,15};
-	int target;
-	fin>>target;
-	fout<<binarySearch(nums,target)<<endl;
-	return 0;
-}
-\end{lstlisting}
-
 \section{number-2019}
 【题目描述】\\
 小$K$同学向小$P$同学发送了一个长度为8的01字符串来玩数字游戏，小$P$同学想要知道字符串中究竟有多少个1。\\
@@ -326,34 +219,6 @@ int main(){
 
 	fin.close();
 	fout.close();
-	return 0;
-}
-\end{lstlisting}
-
-\section{factorial}
-从factorial.in文件中读取数字num，计算num的阶乘，将结果写入文件factorial.out\\
-解:\\
-\begin{lstlisting}[language=c++,breaklines=true]
-#include <iostream>
-#include <fstream>
-using namespace std;
-
-long long factorial(int n){
-	long long result = 1;
-	for(int i = 2; i <= n; i++){
-		result *= i;
-	}
-	return result;
-}
-
-int main(){
-	ifstream fin("factorial.in");
-	ofstream fout("factorial.out");
-	int num;
-	long long result;
-	fin>>num;
-	result = factorial(num);
-	fout<<result;
 	return 0;
 }
 \end{lstlisting}
@@ -692,51 +557,6 @@ int main(){
 	}
 	fin.close();
 	fout.close();
-	return 0;
-}
-\end{lstlisting}
-
-\section{bubble-sort}
-冒泡排序64,34,25,12,22,11,90\\
-解:\\
-\begin{tabular}{|c|c|c|}
-\hline
-1 & 外层循环 & 控制排序的轮数\\
-\hline
-2 & 内层循环 & 比较相邻的两个元素的大小\\
-\hline
-\end{tabular}
-\begin{lstlisting}[language=C++,breaklines=true]
-#include <iostream>
-
-using namespace std;
-
-void bubbleSort(int arr[],int size){
-	for(int i = 0; i < size - 1;i++){
-		for(int j = 0;j < size - i - 1;j++){
-			if(arr[j] > arr[j + 1]){
-				int temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-			}
-		}
-	}
-}
-
-int main(){
-	int arr[] = {64,34,25,12,22,11,90};
-	int size = sizeof(arr) / sizeof(arr[0]);
-	cout<<"Unsorted array:"<<endl;
-	for(int i = 0;i < size;i++){
-		cout<<arr[i]<<" ";
-	}
-	cout<<endl;
-	bubbleSort(arr,size);
-	cout<<"sorted array"<<endl;
-	for(int i = 0;i < size;i++){
-		cout<<arr[i]<<" ";
-	}
-	cout<<endl;
 	return 0;
 }
 \end{lstlisting}
@@ -1330,109 +1150,6 @@ int main(){
 			ans = i; // 将该人的编号赋值给ans
 	cout << ans << endl;
 	return 0;
-}
-\end{lstlisting}
-
-\section{dijkstra}
-解:\\
-\begin{lstlisting}[language=C++,breaklines=true]
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <limits>
-
-#define INF std::numeric_limits<int>::max()
-
-// Structure to represent a node and its distance from the source
-struct Node {
-    int vertex;
-    int distance;
-
-    bool operator>(const Node& other) const {
-        return distance > other.distance;
-    }
-};
-
-// Graph class
-class Graph {
-    int numVertices;
-    std::vector<std::vector<std::pair<int, int>>> adjacencyList;
-
-public:
-    Graph(int vertices) : numVertices(vertices) {
-        adjacencyList.resize(numVertices);
-    }
-
-    void addEdge(int source, int destination, int weight) {
-        adjacencyList[source].push_back(std::make_pair(destination, weight));
-        adjacencyList[destination].push_back(std::make_pair(source, weight));
-    }
-
-    void dijkstra(int source) {
-        std::vector<int> distance(numVertices, INF); // Initialize distances as infinity
-        std::vector<bool> visited(numVertices, false); // Mark all nodes as not visited
-        std::priority_queue<Node, std::vector<Node>, std::greater<Node>> pq; // Priority queue to get the node with the minimum distance
-
-        // Distance from source to itself is 0
-        distance[source] = 0;
-        pq.push({source, 0});
-
-        while (!pq.empty()) {
-            int u = pq.top().vertex;
-            pq.pop();
-
-            if (visited[u])
-                continue;
-
-            visited[u] = true;
-
-            for (const auto& neighbor : adjacencyList[u]) {
-                int v = neighbor.first;
-                int weight = neighbor.second;
-
-                int newDistance = distance[u] + weight;
-
-                if (newDistance < distance[v]) {
-                    distance[v] = newDistance;
-                    pq.push({v, newDistance});
-                }
-            }
-        }
-
-        // Print the shortest distances from the source
-        std::cout << "Shortest distances from source " << source << ":\n";
-        for (int i = 0; i < numVertices; ++i) {
-            std::cout << "Vertex " << i << ": ";
-            if (distance[i] == INF)
-                std::cout << "INF\n";
-            else
-                std::cout << distance[i] << "\n";
-        }
-    }
-};
-
-int main() {
-    // Create a graph
-    int numVertices = 6;
-    Graph graph(numVertices);
-
-    // Add edges to the graph
-    graph.addEdge(0, 1, 4);
-    graph.addEdge(0, 2, 2);
-    graph.addEdge(1, 2, 1);
-    graph.addEdge(1, 3, 5);
-    graph.addEdge(2, 3, 8);
-    graph.addEdge(2, 4, 10);
-    graph.addEdge(3, 4, 2);
-    graph.addEdge(3, 5, 6);
-    graph.addEdge(4, 5, 3);
-
-    int source = 0; // Set the source vertex
-
-    // Run Dijkstra's algorithm
-    graph.dijkstra(source);
-
-    return 0;
 }
 \end{lstlisting}
 
