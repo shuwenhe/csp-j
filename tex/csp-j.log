@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.6.22)  21 JUL 2023 23:02
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.6.22)  23 JUL 2023 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1383,8 +1383,14 @@ L3 programming layer <2022/08/05>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `csp-j.out' has not changed.
-(rerunfilecheck)             Checksum: 7B6A274043F6D97F4506BF3CC1DCA731;2142.
+
+Package rerunfilecheck Warning: File `csp-j.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `csp-j.out':
+(rerunfilecheck)             Before: 616DB324910CD58CC9720AF1ED047504;2160
+(rerunfilecheck)             After:  7B6A274043F6D97F4506BF3CC1DCA731;2142.
  ) 
 Here is how much of TeX's memory you used:
  21161 strings out of 411165

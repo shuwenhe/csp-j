@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+	ifstream fin("decode.in");
+	ofstream fout("decode.out");
+	
+	long k,n,d,e;
+	fin>>k;
+
+	for(long i = 0;i < k; i++){
+		fin>>n>>d>>e;
+		fout<<n<<" "<<d<<" "<<e<<endl;
+	}
+}
+
+
