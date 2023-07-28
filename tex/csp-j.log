@@ -1,20 +1,19 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.6.22)  23 JUL 2023 23:12
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.4) (preloaded format=xelatex 2023.6.13)  28 JUL 2023 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./csp-j.tex
 (csp-j.tex
-LaTeX2e <2023-06-01>
-L3 programming layer <2023-06-16>
-(C:\CTEX\MiKTeX\tex/latex/ctex\ctexbook.cls
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-03-30> (C:\CTEX\MiKTeX\tex/latex/ctex\ctexbook.cls
 (C:\CTEX\MiKTeX\tex/latex/ctex/config\ctexbackend.cfg
 File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
 )
 (C:\CTEX\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2023-06-16 L3 programming layer (loader) 
+Package: expl3 2023-03-30 L3 programming layer (loader) 
 
 (C:\CTEX\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
-File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
+File: l3backend-xetex.def 2023-03-30 L3 backend support: XeTeX
 \g__graphics_track_int=\count181
 \l__pdf_internal_box=\box51
 \g__pdf_backend_object_int=\count182
@@ -44,9 +43,9 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 
 (C:\CTEX\CTeX\tex/latex/ctex/cfg\ctexopts.cfg)
 (C:\CTEX\MiKTeX\tex/latex/base\book.cls
-Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
+Document Class: book 2022/07/02 v1.4n Standard LaTeX document class
 (C:\CTEX\MiKTeX\tex/latex/base\bk12.clo
-File: bk12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+File: bk12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count188
 \c@chapter=\count189
@@ -226,7 +225,7 @@ Package fontspec Info: Font family 'SimSun(0)' created for font 'SimSun' with
 File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
 )
 (C:\CTEX\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2023/05/13 v2.17o AMS math features
+Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip60
 
 For additional information on amsmath, use the `?' option.
@@ -235,7 +234,7 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (C:\CTEX\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
+\@emptytoks=\toks16
 \ex@=\dimen175
 ))
 (C:\CTEX\MiKTeX\tex/latex/amsmath\amsbsy.sty
@@ -275,21 +274,21 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \dotsspace@=\muskip17
 \c@parentequation=\count296
 \dspbrk@lvl=\count297
-\tag@help=\toks18
+\tag@help=\toks17
 \row@=\count298
 \column@=\count299
 \maxfields@=\count300
-\andhelp@=\toks19
+\andhelp@=\toks18
 \eqnshift@=\dimen178
 \alignsep@=\dimen179
 \tagshift@=\dimen180
 \tagwidth@=\dimen181
 \totwidth@=\dimen182
 \lineht@=\dimen183
-\@envbody=\toks20
+\@envbody=\toks19
 \multlinegap=\skip61
 \multlinetaggap=\skip62
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
@@ -303,15 +302,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )
 (C:\CTEX\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks22
-\thm@bodyfont=\toks23
-\thm@headfont=\toks24
-\thm@notefont=\toks25
-\thm@headpunct=\toks26
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
 \thm@preskip=\skip63
 \thm@postskip=\skip64
 \thm@headsep=\skip65
-\dth@everypar=\toks27
+\dth@everypar=\toks26
 )
 (C:\CTEX\MiKTeX\tex/latex/base\newlfont.sty
 Package: newlfont 1998/08/17 v2.2m Standard LaTeX package
@@ -337,7 +336,7 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (C:\CTEX\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks28
+\KV@toks@=\toks27
 )
 (C:\CTEX\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
@@ -356,7 +355,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutheight=\dimen189
 \Gm@layouthoffset=\dimen190
 \Gm@layoutvoffset=\dimen191
-\Gm@dimlist=\toks29
+\Gm@dimlist=\toks28
 
 (C:\CTEX\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\CTEX\MiKTeX\tex/latex/graphics\graphics.sty
@@ -373,44 +372,32 @@ Package graphics Info: Driver file: xetex.def on input line 107.
 (C:\CTEX\MiKTeX\tex/latex/graphics-def\xetex.def
 File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
 ))
-(C:\CTEX\MiKTeX\tex/latex/ulem\ulem.sty
-\UL@box=\box57
-\UL@hyphenbox=\box58
-\UL@skip=\skip66
-\UL@hook=\toks30
-\UL@height=\dimen192
-\UL@pe=\count304
-\UL@pixel=\dimen193
-\ULC@box=\box59
-Package: ulem 2019/11/18
-\ULdepth=\dimen194
-)
 (C:\CTEX\MiKTeX\tex/latex/slashbox\slashbox.sty
 slashbox style by K.Yasuoka, May 1993.
-\@slashboxa=\box60
-\@slashboxb=\box61
-\@slashboxc=\box62
-\@slashboxwd=\count305
-\@slashboxht=\count306
-\@slashsepl=\dimen195
-\@slashsepr=\dimen196
+\@slashboxa=\box57
+\@slashboxb=\box58
+\@slashboxc=\box59
+\@slashboxwd=\count304
+\@slashboxht=\count305
+\@slashsepl=\dimen192
+\@slashsepr=\dimen193
 ) (C:\CTEX\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip67
-\f@nch@O@elh=\skip68
-\f@nch@O@erh=\skip69
-\f@nch@O@olh=\skip70
-\f@nch@O@orh=\skip71
-\f@nch@O@elf=\skip72
-\f@nch@O@erf=\skip73
-\f@nch@O@olf=\skip74
-\f@nch@O@orf=\skip75
+\f@nch@headwidth=\skip66
+\f@nch@O@elh=\skip67
+\f@nch@O@erh=\skip68
+\f@nch@O@olh=\skip69
+\f@nch@O@orh=\skip70
+\f@nch@O@elf=\skip71
+\f@nch@O@erf=\skip72
+\f@nch@O@olf=\skip73
+\f@nch@O@orf=\skip74
 )
 (C:\CTEX\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen197
-\Gin@req@width=\dimen198
+\Gin@req@height=\dimen194
+\Gin@req@width=\dimen195
 )
 (C:\CTEX\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
@@ -453,24 +440,24 @@ LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
 (C:\CTEX\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count307
-\lst@gtempboxa=\box63
-\lst@token=\toks31
-\lst@length=\count308
-\lst@currlwidth=\dimen199
-\lst@column=\count309
-\lst@pos=\count310
-\lst@lostspace=\dimen256
-\lst@width=\dimen257
-\lst@newlines=\count311
-\lst@lineno=\count312
-\lst@maxwidth=\dimen258
+\lst@mode=\count306
+\lst@gtempboxa=\box60
+\lst@token=\toks29
+\lst@length=\count307
+\lst@currlwidth=\dimen196
+\lst@column=\count308
+\lst@pos=\count309
+\lst@lostspace=\dimen197
+\lst@width=\dimen198
+\lst@newlines=\count310
+\lst@lineno=\count311
+\lst@maxwidth=\dimen199
 
 (C:\CTEX\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count313
-\lst@skipnumbers=\count314
-\lst@framebox=\box64
+\c@lstnumber=\count312
+\lst@skipnumbers=\count313
+\lst@framebox=\box61
 )
 (C:\CTEX\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
@@ -479,8 +466,8 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 
 (C:\CTEX\MiKTeX\tex/xelatex/xecjk\xeCJK-listings.sty
 Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count315
-\l__xeCJK_listings_flag_int=\count316
+\l__xeCJK_listings_max_char_int=\count314
+\l__xeCJK_listings_flag_int=\count315
 )
 (C:\CTEX\MiKTeX\tex/latex/tocbibind\tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
@@ -489,7 +476,19 @@ Package tocbibind Info: The document has chapter divisions on input line 50.
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) (C:\CTEX\MiKTeX\tex/latex/natbib\natbib.sty
+) (C:\CTEX\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box62
+\UL@hyphenbox=\box63
+\UL@skip=\skip75
+\UL@hook=\toks30
+\UL@height=\dimen256
+\UL@pe=\count316
+\UL@pixel=\dimen257
+\ULC@box=\box64
+Package: ulem 2019/11/18
+\ULdepth=\dimen258
+)
+(C:\CTEX\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 
 
@@ -502,7 +501,7 @@ LaTeX Info: Redefining \cite on input line 694.
 LaTeX Info: Redefining \citenum on input line 708.
 \c@NAT@ctr=\count317
 ) (C:\CTEX\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2023-05-16 v7.00y Hypertext links for LaTeX
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
 
 (C:\CTEX\MiKTeX\tex/generic/pdfescape\pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
@@ -517,7 +516,7 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 (C:\CTEX\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2023-05-16 v2.51 Cross-referencing by name of section
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
 
 (C:\CTEX\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
@@ -527,45 +526,44 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count318
 )
-(C:\CTEX\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count319
-)
 \@linkdim=\dimen259
-\Hy@linkcounter=\count320
-\Hy@pagecounter=\count321
+\Hy@linkcounter=\count319
+\Hy@pagecounter=\count320
 
 (C:\CTEX\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2023-05-16 v7.00y Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
 )
 (C:\CTEX\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count322
+(C:\CTEX\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count321
 
 (C:\CTEX\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2023-05-16 v7.00y Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4050.
-Package hyperref Info: Option `CJKbookmarks' set `true' on input line 4050.
-Package hyperref Info: Option `bookmarks' set `true' on input line 4050.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4050
+Package hyperref Info: Option `unicode' set `true' on input line 4060.
+Package hyperref Info: Option `CJKbookmarks' set `true' on input line 4060.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4060.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4060
 .
-Package hyperref Info: Option `colorlinks' set `true' on input line 4050.
-Package hyperref Info: Hyper figures OFF on input line 4167.
-Package hyperref Info: Link nesting OFF on input line 4172.
-Package hyperref Info: Hyper index ON on input line 4175.
-Package hyperref Info: Plain pages OFF on input line 4182.
-Package hyperref Info: Backreferencing OFF on input line 4187.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4434.
-\c@Hy@tempcnt=\count323
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count322
 
 (C:\CTEX\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4772.
+LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen260
 
 (C:\CTEX\MiKTeX\tex/generic/bitset\bitset.sty
@@ -575,39 +573,39 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count324
+\Fld@menulength=\count323
 \Field@Width=\dimen261
 \Fld@charsize=\dimen262
-Package hyperref Info: Hyper figures OFF on input line 6051.
-Package hyperref Info: Link nesting OFF on input line 6056.
-Package hyperref Info: Hyper index ON on input line 6059.
-Package hyperref Info: backreferencing OFF on input line 6066.
-Package hyperref Info: Link coloring ON on input line 6069.
-Package hyperref Info: Link coloring with OCG OFF on input line 6076.
-Package hyperref Info: PDF/A mode OFF on input line 6081.
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring ON on input line 6060.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
 
 (C:\CTEX\MiKTeX\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count325
-\c@Item=\count326
-\c@Hfootnote=\count327
+\Hy@abspage=\count324
+\c@Item=\count325
+\c@Hfootnote=\count326
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
 (C:\CTEX\MiKTeX\tex/latex/hyperref\hxetex.def
-File: hxetex.def 2023-05-16 v7.00y Hyperref driver for XeTeX
+File: hxetex.def 2023-02-07 v7.00v Hyperref driver for XeTeX
 
 (C:\CTEX\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box65
-\c@Hy@AnnotLevel=\count328
-\HyField@AnnotCount=\count329
-\Fld@listcount=\count330
-\c@bookmark@seq@number=\count331
+\c@Hy@AnnotLevel=\count327
+\HyField@AnnotCount=\count328
+\Fld@listcount=\count329
+\c@bookmark@seq@number=\count330
 
 (C:\CTEX\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -632,7 +630,7 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \aftertitleunit=\skip80
 \ttl@plus=\dimen263
 \ttl@minus=\dimen264
-\ttl@toksa=\toks32
+\ttl@toksa=\toks31
 \titlewidth=\dimen265
 \titlewidthlast=\dimen266
 \titlewidthfirst=\dimen267
@@ -655,7 +653,7 @@ Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 114.
 (C:\CTEX\MiKTeX\tex/latex/pict2e\p2e-xetex.def
 File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
-\pIIe@GRAPH=\toks33
+\pIIe@GRAPH=\toks32
 \@arclen=\dimen268
 \@arcrad=\dimen269
 \pIIe@tempdima=\dimen270
@@ -667,15 +665,15 @@ File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
 (C:\CTEX\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count332
-\calc@Bcount=\count333
+\calc@Acount=\count331
+\calc@Bcount=\count332
 \calc@Adimen=\dimen276
 \calc@Bdimen=\dimen277
 \calc@Askip=\skip81
 \calc@Bskip=\skip82
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count334
+\calc@Ccount=\count333
 \calc@Cskip=\skip83
 )
 (C:\CTEX\MiKTeX\tex/latex/tools\array.sty
@@ -683,7 +681,7 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen278
 \ar@mcellbox=\box67
 \extrarowheight=\dimen279
-\NC@list=\toks34
+\NC@list=\toks33
 \extratabsurround=\skip84
 \backup@length=\skip85
 \ar@cellbox=\box68
@@ -866,7 +864,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count335
+\c@lstlisting=\count334
 (C:\CTEX\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
 
@@ -921,7 +919,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-140.
+138.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -932,6 +930,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [3]
+Missing character: There is no ， in font [lmroman12-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--209
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -950,9 +954,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -974,12 +975,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
-Overfull \hbox (14.25352pt too wide) in paragraph at lines 376--425
-\TU/SimSun(0)/m/n/12 比 如，|  表 达 式 \TU/lmr/m/n/12 0|1&0 \TU/SimSun(0)/m/n/12 的 运
- 算 顺 序 等 同 于 \TU/lmr/m/n/12 0|(1&0) \TU/SimSun(0)/m/n/12 ；|  表 达 式 \TU/lmr/m/n/
-12 0&1&0|1 \TU/SimSun(0)/m/n/12 的 运 算 顺 序 等 同 于 \TU/lmr/m/n/12 ((0&1)&0)|1\TU/S
-imSun(0)/m/n/12 。| 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1014,6 +1011,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
+Overfull \hbox (14.25352pt too wide) in paragraph at lines 460--510
+\TU/SimSun(0)/m/n/12 比 如，|  表 达 式 \TU/lmr/m/n/12 0|1&0 \TU/SimSun(0)/m/n/12 的 运
+ 算 顺 序 等 同 于 \TU/lmr/m/n/12 0|(1&0) \TU/SimSun(0)/m/n/12 ；|  表 达 式 \TU/lmr/m/n/
+12 0&1&0|1 \TU/SimSun(0)/m/n/12 的 运 算 顺 序 等 同 于 \TU/lmr/m/n/12 ((0&1)&0)|1\TU/S
+imSun(0)/m/n/12 。| 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11]
+Underfull \vbox (badness 2941) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1025,8 +1050,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
-Overfull \hbox (20.30826pt too wide) in paragraph at lines 503--504
+[13]
+Overfull \hbox (20.30826pt too wide) in paragraph at lines 588--589
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][] 
  []
@@ -1043,44 +1068,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
-Overfull \hbox (27.04213pt too wide) in paragraph at lines 549--629
-\TU/SimSun(0)/m/n/12 篮 子 里 的 糖 数 量|   []$\OML/cmm/m/it/12 n$ \TU/SimSun(0)/m/n/
-12 块。|  此 时 篮 子 里 剩 余 的 糖 果 均 归 你 所 有 |— —|  这 些 糖 果 是|   []。| 
- []
-
-
-Overfull \hbox (54.75626pt too wide) in paragraph at lines 549--629
-\TU/SimSun(0)/m/n/12 作 为 幼 儿 园 高 质 量 小 朋 友，|  你 希 望 让|   []的 糖 果 数 量  |（|   []！
- ）|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 549--629
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [14]
-Missing character: There is no ， in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--700
+Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--640
 
  []
 
@@ -1093,6 +1106,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1102,6 +1118,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1111,7 +1130,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 751--798
+Underfull \hbox (badness 10000) in paragraph at lines 750--751
 
  []
 
@@ -1128,23 +1147,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18]
-Missing character: There is no 𝑤 in font cmmi12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 800--823
-
- []
-
-Missing character: There is no ∼ in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
-
-Underfull \hbox (badness 10000) in paragraph at lines 825--902
+Underfull \hbox (badness 10000) in paragraph at lines 776--778
 
  []
 
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1156,8 +1180,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19]
-Underfull \vbox (badness 1603) has occurred while \output is active []
+[21]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
+Overfull \hbox (27.04213pt too wide) in paragraph at lines 918--998
+\TU/SimSun(0)/m/n/12 篮 子 里 的 糖 数 量|   []$\OML/cmm/m/it/12 n$ \TU/SimSun(0)/m/n/
+12 块。|  此 时 篮 子 里 剩 余 的 糖 果 均 归 你 所 有 |— —|  这 些 糖 果 是|   []。| 
+ []
+
+
+Overfull \hbox (54.75626pt too wide) in paragraph at lines 918--998
+\TU/SimSun(0)/m/n/12 作 为 幼 儿 园 高 质 量 小 朋 友，|  你 希 望 让|   []的 糖 果 数 量  |（|   []！
+ ）|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 918--998
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1168,7 +1226,82 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20]
+[24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1086
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+Missing character: There is no 𝑤 in font cmmi12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1088--1111
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[27]
+Missing character: There is no ∼ in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1190
+
+ []
+
+
+Underfull \vbox (badness 2103) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29]
 Missing character: There is no 𝑞 in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no 𝑥 in font cmmi12!
 Missing character: There is no 𝑥 in font cmmi12!
@@ -1184,7 +1317,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21]
+[30]
+File: num.png Graphic file (type bmp)
+<num.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1273--1298
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1196,11 +1337,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[22]
-File: num.png Graphic file (type bmp)
-<num.png>
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1345
 
-Underfull \hbox (badness 10000) in paragraph at lines 985--1010
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 1347--1392
 
  []
 
@@ -1212,40 +1379,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1057
-
- []
-
-
-Underfull \vbox (badness 1072) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1104
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[25]
+[34]
 Missing character: There is no � in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1120
+Underfull \hbox (badness 10000) in paragraph at lines 1394--1408
 
  []
 
@@ -1257,8 +1394,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26]
-Underfull \vbox (badness 2941) has occurred while \output is active []
+[35]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 1526--1527
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1269,7 +1437,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27]
+[39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1278,25 +1449,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28] (csp-j.aux)
- ***********
-LaTeX2e <2023-06-01>
-L3 programming layer <2022/08/05>
- ***********
+[40]
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[41] (csp-j.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `csp-j.out' has not changed.
-(rerunfilecheck)             Checksum: 4B5BDCEF43F0BDC5C7DA4C8EDBBE0B97;1836.
+
+Package rerunfilecheck Warning: File `csp-j.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `csp-j.out':
+(rerunfilecheck)             Before: 4B5BDCEF43F0BDC5C7DA4C8EDBBE0B97;1836
+(rerunfilecheck)             After:  7B25FB12C6776FD21745FC3ADFC96558;3001.
  ) 
 Here is how much of TeX's memory you used:
- 20823 strings out of 411165
- 423921 string characters out of 5816116
- 2014380 words of memory out of 5000000
- 41047 multiletter control sequences out of 15000+600000
- 525485 words of font info for 115 fonts, out of 8000000 for 9000
+ 20876 strings out of 411427
+ 431580 string characters out of 5823212
+ 2054290 words of memory out of 5000000
+ 40802 multiletter control sequences out of 15000+600000
+ 524425 words of font info for 118 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,12n,108p,1205b,1837s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,12n,108p,1205b,1835s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on csp-j.pdf (28 pages).
+Output written on csp-j.pdf (41 pages).
