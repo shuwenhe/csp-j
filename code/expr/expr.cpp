@@ -1,8 +1,11 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <stack>
+#include <cstring>
 
 using namespace std;
 
-struct node{
+struct node {
 	int v;
 	int y;
 	int h;
@@ -12,14 +15,12 @@ int main(){
 	ifstream fin("expr.in");
 	ofstream fout("expr.out");
 
-	char s[30];
+	char s[20];
+	fin>>s;
+	int l = strlen(s);
 	stack<char> q;
 	stack<node> n;
 
-	fin>>s;
-	int l = strlen(s);
-	s[l] = ')';
-	q.push('(');
 	for(int i = 0; i < l; i++){
 		if(s[i] == '('){
 			q.push(s[i]);
@@ -34,19 +35,22 @@ int main(){
 			if(s[i] == ')'){
 				fff = true;
 				if(q.top() == '('){
-					q.pop();
+					q.top();
 				}else{
-					while(!n.empty() && !q.empty()&&(q.top() == '&' || q.top == '|')){
-						char z = q.top();
-						q.pop();
-						node a = n.top();
-						n.pop();
-						node b = n.top();
-						n.pop();
+					while(!n.empty()&& !q.empty()&&(q.top() == '')){
+
 					}
 				}
 			}
+			if(){}
+			if(){}
+			cout<<s<<endl;
 		}
-		cout<<s[i]<<endl;
 	}
+	fout<<n.top().v<<endl;
+	fout<<n.top().y<<" "<<n.top().h<<endl;
+
+	fin.close();
+	fout.close();
+	return 0;
 }

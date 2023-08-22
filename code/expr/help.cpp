@@ -24,6 +24,7 @@ int main() {
     q.push('('); 
 
     // 0&(1|0)|(1|1|1&0)
+    // 0123456789
     for (int i = 0; i <= l; i++) { 
         if (s[i] == '(') { // start of a new sub-expression 
             q.push(s[i]); 
@@ -40,7 +41,7 @@ int main() {
                 if (q.top() == '(') { 
                     q.pop(); 
                 } else { 
-                while (!n.empty() && !q.empty() && (q.top() == '&' || q.top() == '|')) { 
+                    while (!n.empty() && !q.empty() && (q.top() == '&' || q.top() == '|')) { 
                         char z = q.top();
                         q.pop(); 
                         node a = n.top(); 
@@ -58,7 +59,7 @@ int main() {
                                 temp.y += a.y; 
                                 temp.h += a.h; 
                             }
-                            temp.v = a.v & b.v; 
+                            temp.v = b.v & a.v; 
                         }
                         if (z == '|') {
                             if (b.v == 1) {
@@ -67,7 +68,7 @@ int main() {
                                 temp.h += a.h;
                                 temp.y += a.y;
                             }
-                            temp.v = a.v | b.v;
+                            temp.v = b.v | a.v;
                         }
                         n.push(temp);
                     }
@@ -91,7 +92,7 @@ int main() {
                             temp.y += a.y;
                             temp.h += a.h;
                         }
-                        temp.v = a.v & b.v;
+                        temp.v = b.v & a.v;
                     }
                     if (z == '|') {
                         if (b.v == 1) temp.h++;
