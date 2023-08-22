@@ -97,7 +97,7 @@ ShuwenHe\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{2022}
 \subsection{pow}
-pow-csp-j-2022-1\\
+CPS-J-2022-1-pow\\
 【题目描述】\\
 小文同学刚刚接触了信息学竞赛，有一天她遇到了这样一个题：给定正整数a和b，求$a^b$的值是多少。\\
 $a^b$即b个a相乘的值，例如$2^3$即为3个2相乘，结果为$2\times2\times2=8$。\\
@@ -157,153 +157,8 @@ int main(){
 }
 \end{lstlisting}
 
-\section{power}
-power-csp-j-2020\\
-【题目描述】\\
-一般来说，一个正整数可以拆分成若干个正整数的和。例如， $1 = 1， 10 =
-1 + 2 + 3 + 4 $等。\\
-对于正整数$n$的一种特定拆分，我们称它为“优秀的”，当且仅当在这种拆
-分下$n$被分解为了若干个不同的2的正整数次幂。注意，一个数$x$能被表
-示成2的正整数次幂，当且仅当$x$能通过正整数个2相乘在一起得到。\\
-例如， $10 = 8 + 2 = 2^3 + 2^1$ 是一个优秀的拆分。但是， $7 = 4 + 2 + 1 =
-2^2 + 2^1 + 2^0$ 就不是一个优秀的拆分，因为1不是2的正整数次幂。\\
-现在，给定正整数$n$，你需要判断这个数的所有拆分中，是否存在优秀的
-拆分。 若存在， 请你给出具体的拆分方案。\\
-【输入格式】\\
-输入文件名为 power.in。\\
-输入文件只有一行，一个正整数$n$，代表需要判断的数。\\
-【输出格式】\\
-输出文件名为 power.out。\\
-如果这个数的所有拆分中，存在优秀的拆分。那么， 你需要从大到小输出
-这个拆分中的每一个数， 相邻两个数之间用一个空格隔开。 可以证明， 在规定
-了拆分数字的顺序后， 该拆分方案是唯一的。\\
-若不存在优秀的拆分，输出“-1”（不包含双引号）。\\
-【样例 1 输入】\\
-6\\
-【样例 1 输出】\\
-4 2\\
-【样例 1 解释】\\
-$6 = 4 + 2 = 2^2 + 2^1$ 是一个优秀的拆分。注意， 6 = 2 + 2 + 2 不是一个优
-秀的拆分，因为拆分成的3个数不满足每个数互不相同。\\
-【样例 2 输入】\\
-7\\
-【样例 2 输出】\\
--1\\
-【样例 3】\\
-见选手目录下的 power/power3.in 与 power/power3.ans。\\
-【数据范围与提示】\\
-对于 20\% 的数据，$n\leq 10$。\\
-对于另外20\%的数据，保证$n$为奇数。\\
-对于另外20\%的数据，保证$n$为2的正整数次幂。\\
-对于 80\% 的数据， $n\leq 1024$。\\
-对于 100\% 的数据， $1\leq n\leq 1\times10^7$。\\
-解:\\
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-1 & input &6 & 7\\
-\hline
-2 & output & 4 2 & -1\\
-\hline
-3 & $2^1,2^2,...,2^n$ & $power = 1\ll i$& \\
-\hline
-\end{tabular}\\
-\begin{lstlisting}[language=C++,breaklines=true]
-#include <iostream>
-#include <fstream>
-#include <vector>
-
-using namespace std;
-
-int main(){
-	ifstream fin("power.in");
-	ofstream fout("power.out");
-	int n;
-	vector<int> partition;
-	fin>>n;
-	for(int i = 30; i >= 0; i--){
-		int power = 1<<i;
-		if(n >= power){
-			partition.push_back(power);
-			n -= power;
-		}
-	}
-	for(int i = 0; i <= partition.size();i++){
-		if(partition[i] != 0){
-			fout<<partition[i];
-			fout<<" ";
-		}
-	}
-	fin.close();
-	fout.close();
-	return 0;
-}
-\end{lstlisting}
-
-\section{number}
-number-csp-j-2019-1\\
-【题目描述】\\
-小$K$同学向小$P$同学发送了一个长度为8的01字符串来玩数字游戏，小$P$同学想要知道字符串中究竟有多少个1。\\
-注意：01字符串为每一个字符是0或者1的字符串，如“101”（不含双引号）为一个长度为3的01字符串。\\
-【输入格式】\\
-输入文件名为number.in\\
-输入文件只有一行，一个长度为8的01字符串$s$。\\
-【输出格式】\\
-输出文件名为number.out\\
-输出文件只有一行，包含一个整数，即01字符串中字符1的个数。\\
-【输入输出样例1】\\
-\begin{tabular}{|c|c|}
-\hline
-number.in & number.out\\
-\hline
-00010100 & 2\\
-\hline
-\end{tabular}\\
-【输入输出样例2】\\
-\begin{tabular}{|c|c|}
-\hline
-number.in & number.out\\
-\hline
-11111111 & 8\\
-\hline
-\end{tabular}\\
-解:\\
-\begin{tabular}{|c|c|}
-\hline
-1 & s[i] == '1'\\
-\hline
-2 & count++; \\
-\hline
-\end{tabular}
-\begin{lstlisting}[language=c++]
-#include <iostream>
-#include <fstream>
-#include <string>
-
-using namespace std;
-
-int main(){
-	ifstream fin("number.in");
-	ofstream fout("number.out");
-
-	string s;
-	fin>>s;
-	int count = 0;
-
-	for(int i = 0; i < s.length();i++){
-		if(s[i] == '1'){
-			count++;
-		}
-	}
-	fout<<count;
-
-	fin.close();
-	fout.close();
-	return 0;
-}
-\end{lstlisting}
-
-\section{decode}
-decode-csp-j-2022-2\\
+\subsection{decode}
+CPS-J-2022-2-decode\\
 【题目描述】\\
 给定一个正整数$k$，有$k$次询问，每次给定三个正整数$n_i, e_i, d_i$求两个正整数$p_i
 , q_i$，使$n_i = p_i \times q_i, e_i \times d_i = (p_i − 1)(q_i − 1) + 1$。\\
@@ -457,8 +312,8 @@ int main(){
 }
 \end{lstlisting}
 
-\section{expr}
-expr-csp-j-2022-3\\
+\subsection{expr}
+CPS-J-2022-3-expr\\
 【题目描述】\\
 逻辑表达式是计算机科学中的重要概念和工具，包含逻辑值、逻辑运算、逻辑运算
 优先级等内容。\\
@@ -628,6 +483,153 @@ int main() {
     fout.close();
 
     return 0;
+}
+\end{lstlisting}
+
+\section{2020}
+\subsection{power}
+power-csp-j-2020\\
+【题目描述】\\
+一般来说，一个正整数可以拆分成若干个正整数的和。例如， $1 = 1， 10 =
+1 + 2 + 3 + 4 $等。\\
+对于正整数$n$的一种特定拆分，我们称它为“优秀的”，当且仅当在这种拆
+分下$n$被分解为了若干个不同的2的正整数次幂。注意，一个数$x$能被表
+示成2的正整数次幂，当且仅当$x$能通过正整数个2相乘在一起得到。\\
+例如， $10 = 8 + 2 = 2^3 + 2^1$ 是一个优秀的拆分。但是， $7 = 4 + 2 + 1 =
+2^2 + 2^1 + 2^0$ 就不是一个优秀的拆分，因为1不是2的正整数次幂。\\
+现在，给定正整数$n$，你需要判断这个数的所有拆分中，是否存在优秀的
+拆分。 若存在， 请你给出具体的拆分方案。\\
+【输入格式】\\
+输入文件名为 power.in。\\
+输入文件只有一行，一个正整数$n$，代表需要判断的数。\\
+【输出格式】\\
+输出文件名为 power.out。\\
+如果这个数的所有拆分中，存在优秀的拆分。那么， 你需要从大到小输出
+这个拆分中的每一个数， 相邻两个数之间用一个空格隔开。 可以证明， 在规定
+了拆分数字的顺序后， 该拆分方案是唯一的。\\
+若不存在优秀的拆分，输出“-1”（不包含双引号）。\\
+【样例 1 输入】\\
+6\\
+【样例 1 输出】\\
+4 2\\
+【样例 1 解释】\\
+$6 = 4 + 2 = 2^2 + 2^1$ 是一个优秀的拆分。注意， 6 = 2 + 2 + 2 不是一个优
+秀的拆分，因为拆分成的3个数不满足每个数互不相同。\\
+【样例 2 输入】\\
+7\\
+【样例 2 输出】\\
+-1\\
+【样例 3】\\
+见选手目录下的 power/power3.in 与 power/power3.ans。\\
+【数据范围与提示】\\
+对于 20\% 的数据，$n\leq 10$。\\
+对于另外20\%的数据，保证$n$为奇数。\\
+对于另外20\%的数据，保证$n$为2的正整数次幂。\\
+对于 80\% 的数据， $n\leq 1024$。\\
+对于 100\% 的数据， $1\leq n\leq 1\times10^7$。\\
+解:\\
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+1 & input &6 & 7\\
+\hline
+2 & output & 4 2 & -1\\
+\hline
+3 & $2^1,2^2,...,2^n$ & $power = 1\ll i$& \\
+\hline
+\end{tabular}\\
+\begin{lstlisting}[language=C++,breaklines=true]
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+	ifstream fin("power.in");
+	ofstream fout("power.out");
+	int n;
+	vector<int> partition;
+	fin>>n;
+	for(int i = 30; i >= 0; i--){
+		int power = 1<<i;
+		if(n >= power){
+			partition.push_back(power);
+			n -= power;
+		}
+	}
+	for(int i = 0; i <= partition.size();i++){
+		if(partition[i] != 0){
+			fout<<partition[i];
+			fout<<" ";
+		}
+	}
+	fin.close();
+	fout.close();
+	return 0;
+}
+\end{lstlisting}
+
+\section{2019}
+\subsection{number}
+number-csp-j-2019-1\\
+【题目描述】\\
+小$K$同学向小$P$同学发送了一个长度为8的01字符串来玩数字游戏，小$P$同学想要知道字符串中究竟有多少个1。\\
+注意：01字符串为每一个字符是0或者1的字符串，如“101”（不含双引号）为一个长度为3的01字符串。\\
+【输入格式】\\
+输入文件名为number.in\\
+输入文件只有一行，一个长度为8的01字符串$s$。\\
+【输出格式】\\
+输出文件名为number.out\\
+输出文件只有一行，包含一个整数，即01字符串中字符1的个数。\\
+【输入输出样例1】\\
+\begin{tabular}{|c|c|}
+\hline
+number.in & number.out\\
+\hline
+00010100 & 2\\
+\hline
+\end{tabular}\\
+【输入输出样例2】\\
+\begin{tabular}{|c|c|}
+\hline
+number.in & number.out\\
+\hline
+11111111 & 8\\
+\hline
+\end{tabular}\\
+解:\\
+\begin{tabular}{|c|c|}
+\hline
+1 & s[i] == '1'\\
+\hline
+2 & count++; \\
+\hline
+\end{tabular}
+\begin{lstlisting}[language=c++]
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main(){
+	ifstream fin("number.in");
+	ofstream fout("number.out");
+
+	string s;
+	fin>>s;
+	int count = 0;
+
+	for(int i = 0; i < s.length();i++){
+		if(s[i] == '1'){
+			count++;
+		}
+	}
+	fout<<count;
+
+	fin.close();
+	fout.close();
+	return 0;
 }
 \end{lstlisting}
 
