@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.4) (preloaded format=xelatex 2023.6.13)  22 AUG 2023 11:40
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.4) (preloaded format=xelatex 2023.6.13)  22 AUG 2023 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -918,6 +918,9 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 (C:\CTEX\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -960,7 +963,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
-Overfull \hbox (14.25352pt too wide) in paragraph at lines 316--366
+Overfull \hbox (14.25352pt too wide) in paragraph at lines 315--365
 \TU/SimSun(0)/m/n/12 比 如，|  表 达 式 \TU/lmr/m/n/12 0|1&0 \TU/SimSun(0)/m/n/12 的 运
  算 顺 序 等 同 于 \TU/lmr/m/n/12 0|(1&0) \TU/SimSun(0)/m/n/12 ；|  表 达 式 \TU/lmr/m/n/
 12 0&1&0|1 \TU/SimSun(0)/m/n/12 的 运 算 顺 序 等 同 于 \TU/lmr/m/n/12 ((0&1)&0)|1\TU/S
@@ -1012,7 +1015,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
-Overfull \hbox (20.30826pt too wide) in paragraph at lines 444--445
+Overfull \hbox (20.30826pt too wide) in paragraph at lines 443--444
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][] 
  []
@@ -1032,7 +1035,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [12]
 Missing character: There is no ， in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--540
+Underfull \hbox (badness 10000) in paragraph at lines 489--538
 
  []
 
@@ -1087,7 +1090,7 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--643
+Underfull \hbox (badness 10000) in paragraph at lines 634--640
 
  []
 
@@ -1124,13 +1127,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 753--754
+Underfull \hbox (badness 10000) in paragraph at lines 750--751
 
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1141,7 +1140,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 779--781
+Underfull \hbox (badness 10000) in paragraph at lines 776--778
 
  []
 
@@ -1175,6 +1174,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1184,19 +1186,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
-Overfull \hbox (27.04213pt too wide) in paragraph at lines 921--1001
+Overfull \hbox (27.04213pt too wide) in paragraph at lines 918--998
 \TU/SimSun(0)/m/n/12 篮 子 里 的 糖 数 量|   []$\OML/cmm/m/it/12 n$ \TU/SimSun(0)/m/n/
 12 块。|  此 时 篮 子 里 剩 余 的 糖 果 均 归 你 所 有 |— —|  这 些 糖 果 是|   []。| 
  []
 
 
-Overfull \hbox (54.75626pt too wide) in paragraph at lines 921--1001
+Overfull \hbox (54.75626pt too wide) in paragraph at lines 918--998
 \TU/SimSun(0)/m/n/12 作 为 幼 儿 园 高 质 量 小 朋 友，|  你 希 望 让|   []的 糖 果 数 量  |（|   []！
  ）|
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--1001
+Underfull \hbox (badness 10000) in paragraph at lines 918--998
 
  []
 
@@ -1233,7 +1235,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1042--1089
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1086
 
  []
 
@@ -1248,7 +1250,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [27]
 Missing character: There is no 𝑤 in font cmmi12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1091--1114
+Underfull \hbox (badness 10000) in paragraph at lines 1088--1111
 
  []
 
@@ -1267,7 +1269,7 @@ Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ≤ in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1116--1193
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1190
 
  []
 
@@ -1315,7 +1317,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: num.png Graphic file (type bmp)
 <num.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1276--1301
+Underfull \hbox (badness 10000) in paragraph at lines 1273--1298
 
  []
 
@@ -1332,7 +1334,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1303--1348
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1345
 
  []
 
@@ -1361,7 +1363,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1350--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1347--1392
 
  []
 
@@ -1376,7 +1378,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [35]
 Missing character: There is no � in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1397--1411
+Underfull \hbox (badness 10000) in paragraph at lines 1394--1408
 
  []
 
@@ -1407,7 +1409,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1529--1530
+Underfull \hbox (badness 10000) in paragraph at lines 1526--1527
 
  []
 
@@ -1457,15 +1459,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `csp-j.out' has not changed.
-(rerunfilecheck)             Checksum: B7C42CC721BDB24DC1C4ADBB7CDEA9EC;3352.
+(rerunfilecheck)             Checksum: 325D40979A94B28561492CD5B9A5D027;3001.
  ) 
 Here is how much of TeX's memory you used:
- 20883 strings out of 411427
- 431711 string characters out of 5823212
- 2054290 words of memory out of 5000000
- 40808 multiletter control sequences out of 15000+600000
- 524433 words of font info for 119 fonts, out of 8000000 for 9000
+ 20876 strings out of 411427
+ 431580 string characters out of 5823212
+ 2035290 words of memory out of 5000000
+ 40802 multiletter control sequences out of 15000+600000
+ 524425 words of font info for 118 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,12n,108p,1205b,1831s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,12n,108p,1205b,1835s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on csp-j.pdf (42 pages).
