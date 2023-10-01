@@ -95,6 +95,151 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{math}
+\section{pow}
+pow-csp-j-2022-1\\
+【题目描述】\\
+小文同学刚刚接触了信息学竞赛，有一天她遇到了这样一个题：给定正整数a和b，求$a^b$的值是多少。\\
+$a^b$即b个a相乘的值，例如$2^3$即为3个2相乘，结果为$2\times2\times2=8$。\\
+“简单！”小文心想，同时很快就写出了一份程序，可是测试时却出现了错误。\\
+小文很快意识到，她的程序里的变量都是 int 类型的。在大多数机器上，int 类型
+能表示的最大数为$2^{31}−1$，因此只要计算结果超过这个数，她的程序就会出现错误。\\
+由于小文刚刚学会编程，她担心使用 int 计算会出现问题。因此她希望你在 $a^b$ 的
+值超过 $10^9$ 时，输出一个 ‐1 进行警示，否则就输出正确的 $a^b$ 的值。\\
+然而小文还是不知道怎么实现这份程序，因此她想请你帮忙。\\
+【输入格式】\\
+从文件 $pow.in$ 中读入数据。\\
+输入共一行，两个正整数 a, b 。\\
+【输出格式】\\
+输出到文件$pow.out$中。\\
+输出共一行，如果 $a^b$ 的值不超过 $10^9$ ，则输出 $a^b$ 的值，否则输出 ‐1 。\\
+【样例 1 输入】\\
+10 9\\
+【样例 1 输出】\\
+1000000000\\
+【样例 2 输入】\\
+23333 66666\\
+【样例 2 输出】\\
+‐1\\
+【数据范围】\\
+对于 $10\%$ 的数据，保证 b = 1\\
+对于 $30\%$ 的数据，保证 $b \leq 2$\\
+对于 $60\%$ 的数据，保证 $b \leq 30, a^b \leq 10^{18}$\\
+对于 $100\%$ 的数据，保证 $1 \leq a, b \leq 10^9$\\
+解:\\
+\begin{tabular}{|c|c|}
+\hline
+1 & result *= a;\\
+\hline
+\end{tabular}
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main(){
+	ifstream fin("pow.in");
+	ofstream fout("pow.out");
+
+	int a,b;
+	fin>>a>>b;
+	long long result = 1;
+	for(int i = 1; i <= b; i++){
+		result *= a;
+		if(result > 1e9){
+			fout<<-1;
+			return 0;
+		}
+	}
+	fout<<result;
+	return 0;
+}
+\end{lstlisting}
+
+\section{power}
+power-csp-j-2020\\
+【题目描述】\\
+一般来说，一个正整数可以拆分成若干个正整数的和。例如， $1 = 1， 10 =
+1 + 2 + 3 + 4 $等。\\
+对于正整数$n$的一种特定拆分，我们称它为“优秀的”，当且仅当在这种拆
+分下$n$被分解为了若干个不同的2的正整数次幂。注意，一个数$x$能被表
+示成2的正整数次幂，当且仅当$x$能通过正整数个2相乘在一起得到。\\
+例如， $10 = 8 + 2 = 2^3 + 2^1$ 是一个优秀的拆分。但是， $7 = 4 + 2 + 1 =
+2^2 + 2^1 + 2^0$ 就不是一个优秀的拆分，因为1不是2的正整数次幂。\\
+现在，给定正整数$n$，你需要判断这个数的所有拆分中，是否存在优秀的
+拆分。 若存在， 请你给出具体的拆分方案。\\
+【输入格式】\\
+输入文件名为 power.in。\\
+输入文件只有一行，一个正整数$n$，代表需要判断的数。\\
+【输出格式】\\
+输出文件名为 power.out。\\
+如果这个数的所有拆分中，存在优秀的拆分。那么， 你需要从大到小输出
+这个拆分中的每一个数， 相邻两个数之间用一个空格隔开。 可以证明， 在规定
+了拆分数字的顺序后， 该拆分方案是唯一的。\\
+若不存在优秀的拆分，输出“-1”（不包含双引号）。\\
+【样例 1 输入】\\
+6\\
+【样例 1 输出】\\
+4 2\\
+【样例 1 解释】\\
+$6 = 4 + 2 = 2^2 + 2^1$ 是一个优秀的拆分。注意， 6 = 2 + 2 + 2 不是一个优
+秀的拆分，因为拆分成的3个数不满足每个数互不相同。\\
+【样例 2 输入】\\
+7\\
+【样例 2 输出】\\
+-1\\
+【样例 3】\\
+见选手目录下的 power/power3.in 与 power/power3.ans。\\
+【数据范围与提示】\\
+对于 20\% 的数据，$n\leq 10$。\\
+对于另外20\%的数据，保证$n$为奇数。\\
+对于另外20\%的数据，保证$n$为2的正整数次幂。\\
+对于 80\% 的数据， $n\leq 1024$。\\
+对于 100\% 的数据， $1\leq n\leq 1\times10^7$。\\
+解:\\
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+1 & input &6 & 7\\
+\hline
+2 & output & 4 2 & -1\\
+\hline
+3 & $2^1,2^2,...,2^n$ & $power = 1\ll i$& \\
+\hline
+\end{tabular}
+\begin{lstlisting}[language=C++,breaklines=true]
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+	ifstream fin("power.in");
+	ofstream fout("power.out");
+	int n;
+	vector<int> partition;
+	fin>>n;
+	for(int i = 30; i >= 0; i--){
+		int power = 1<<i;
+		if(n >= power){
+			partition.push_back(power);
+			n -= power;
+		}
+	}
+	for(int i = 0; i <= partition.size();i++){
+		if(partition[i] != 0){
+			fout<<partition[i];
+			fout<<" ";
+		}
+	}
+	fin.close();
+	fout.close();
+	return 0;
+}
+\end{lstlisting}
+
+
 \chapter{strings}
 \section{number}
 number-csp-j-2019-1\\
@@ -330,149 +475,6 @@ int main() {
     fout.close();
 
     return 0;
-}
-\end{lstlisting}
-
-\section{pow}
-pow-csp-j-2022-1\\
-【题目描述】\\
-小文同学刚刚接触了信息学竞赛，有一天她遇到了这样一个题：给定正整数a和b，求$a^b$的值是多少。\\
-$a^b$即b个a相乘的值，例如$2^3$即为3个2相乘，结果为$2\times2\times2=8$。\\
-“简单！”小文心想，同时很快就写出了一份程序，可是测试时却出现了错误。\\
-小文很快意识到，她的程序里的变量都是 int 类型的。在大多数机器上，int 类型
-能表示的最大数为$2^{31}−1$，因此只要计算结果超过这个数，她的程序就会出现错误。\\
-由于小文刚刚学会编程，她担心使用 int 计算会出现问题。因此她希望你在 $a^b$ 的
-值超过 $10^9$ 时，输出一个 ‐1 进行警示，否则就输出正确的 $a^b$ 的值。\\
-然而小文还是不知道怎么实现这份程序，因此她想请你帮忙。\\
-【输入格式】\\
-从文件 $pow.in$ 中读入数据。\\
-输入共一行，两个正整数 a, b 。\\
-【输出格式】\\
-输出到文件$pow.out$中。\\
-输出共一行，如果 $a^b$ 的值不超过 $10^9$ ，则输出 $a^b$ 的值，否则输出 ‐1 。\\
-【样例 1 输入】\\
-10 9\\
-【样例 1 输出】\\
-1000000000\\
-【样例 2 输入】\\
-23333 66666\\
-【样例 2 输出】\\
-‐1\\
-【数据范围】\\
-对于 $10\%$ 的数据，保证 b = 1\\
-对于 $30\%$ 的数据，保证 $b \leq 2$\\
-对于 $60\%$ 的数据，保证 $b \leq 30, a^b \leq 10^{18}$\\
-对于 $100\%$ 的数据，保证 $1 \leq a, b \leq 10^9$\\
-解:\\
-\begin{tabular}{|c|c|}
-\hline
-1 & result *= a;\\
-\hline
-\end{tabular}
-\begin{lstlisting}[language=C++]
-#include <iostream>
-#include <fstream>
-
-using namespace std;
-
-int main(){
-	ifstream fin("pow.in");
-	ofstream fout("pow.out");
-
-	int a,b;
-	fin>>a>>b;
-	long long result = 1;
-	for(int i = 1; i <= b; i++){
-		result *= a;
-		if(result > 1e9){
-			fout<<-1;
-			return 0;
-		}
-	}
-	fout<<result;
-	return 0;
-}
-\end{lstlisting}
-
-\section{power}
-power-csp-j-2020\\
-【题目描述】\\
-一般来说，一个正整数可以拆分成若干个正整数的和。例如， $1 = 1， 10 =
-1 + 2 + 3 + 4 $等。\\
-对于正整数$n$的一种特定拆分，我们称它为“优秀的”，当且仅当在这种拆
-分下$n$被分解为了若干个不同的2的正整数次幂。注意，一个数$x$能被表
-示成2的正整数次幂，当且仅当$x$能通过正整数个2相乘在一起得到。\\
-例如， $10 = 8 + 2 = 2^3 + 2^1$ 是一个优秀的拆分。但是， $7 = 4 + 2 + 1 =
-2^2 + 2^1 + 2^0$ 就不是一个优秀的拆分，因为1不是2的正整数次幂。\\
-现在，给定正整数$n$，你需要判断这个数的所有拆分中，是否存在优秀的
-拆分。 若存在， 请你给出具体的拆分方案。\\
-【输入格式】\\
-输入文件名为 power.in。\\
-输入文件只有一行，一个正整数$n$，代表需要判断的数。\\
-【输出格式】\\
-输出文件名为 power.out。\\
-如果这个数的所有拆分中，存在优秀的拆分。那么， 你需要从大到小输出
-这个拆分中的每一个数， 相邻两个数之间用一个空格隔开。 可以证明， 在规定
-了拆分数字的顺序后， 该拆分方案是唯一的。\\
-若不存在优秀的拆分，输出“-1”（不包含双引号）。\\
-【样例 1 输入】\\
-6\\
-【样例 1 输出】\\
-4 2\\
-【样例 1 解释】\\
-$6 = 4 + 2 = 2^2 + 2^1$ 是一个优秀的拆分。注意， 6 = 2 + 2 + 2 不是一个优
-秀的拆分，因为拆分成的3个数不满足每个数互不相同。\\
-【样例 2 输入】\\
-7\\
-【样例 2 输出】\\
--1\\
-【样例 3】\\
-见选手目录下的 power/power3.in 与 power/power3.ans。\\
-【数据范围与提示】\\
-对于 20\% 的数据，$n\leq 10$。\\
-对于另外20\%的数据，保证$n$为奇数。\\
-对于另外20\%的数据，保证$n$为2的正整数次幂。\\
-对于 80\% 的数据， $n\leq 1024$。\\
-对于 100\% 的数据， $1\leq n\leq 1\times10^7$。\\
-解:\\
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-1 & input &6 & 7\\
-\hline
-2 & output & 4 2 & -1\\
-\hline
-3 & $2^1,2^2,...,2^n$ & $power = 1\ll i$& \\
-\hline
-\end{tabular}
-\begin{lstlisting}[language=C++,breaklines=true]
-#include <iostream>
-#include <fstream>
-#include <vector>
-
-using namespace std;
-
-int main(){
-	ifstream fin("power.in");
-	ofstream fout("power.out");
-	int n;
-	vector<int> partition;
-	fin>>n;
-	for(int i = 30; i >= 0; i--){
-		int power = 1<<i;
-		if(n >= power){
-			partition.push_back(power);
-			n -= power;
-		}
-	}
-	for(int i = 0; i <= partition.size();i++){
-		if(partition[i] != 0){
-			fout<<partition[i];
-			fout<<" ";
-		}
-	}
-	fin.close();
-	fout.close();
-	return 0;
 }
 \end{lstlisting}
 
