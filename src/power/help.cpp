@@ -1,16 +1,17 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+#include <vector>
 
 using namespace std;
 
 int main(){
 	ifstream fin("power.in");
 	ofstream fout("power.out");
-
 	int n;
-	fin>>n;
 	vector<int> partition;
+	fin>>n;
 	for(int i = 30; i >= 0; i--){
-		int power = 1<<i; // 6 = 4 + 2 1<<2 -> 100
+		int power = 1<<i;
 		if(n >= power){
 			partition.push_back(power);
 			n -= power;
@@ -19,8 +20,10 @@ int main(){
 	for(int i = 0; i <= partition.size();i++){
 		if(partition[i] != 0){
 			fout<<partition[i];
-			fout<<' ';
+			fout<<" ";
 		}
 	}
-	fout<<'\n';
+	fin.close();
+	fout.close();
+	return 0;
 }
